@@ -1,0 +1,16 @@
+Definición de los endpoints requeridos en la aplicación
+
+---- Usuarios ----
+
+Crear 
+Modificar 
+Eliminar 
+
+
+---- Publicaciones (servicios) ----
+
+Crear
+Modificar
+Eliminar
+Ocultar
+Guardar
