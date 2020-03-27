@@ -1,0 +1,13 @@
+version: '3'
+services:
+  phpmyadminMUFF:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadminMUFF
+      environment:
+          - PMA_HOST=sostec-1.cbj0bzg5agt7.us-east-2.rds.amazonaws.com
+          - PMA_PORT=3306
+          - PMA_USER= tecsos
+          - PMA_PASSWORD= UnaContrasena!
+      restart: always
+      ports:
+          - 8072:80
