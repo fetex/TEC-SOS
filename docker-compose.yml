@@ -10,4 +10,4 @@ services:
           - PMA_PASSWORD=password
       restart: always
       ports:
-          - 807:280
+          - 8072:80
