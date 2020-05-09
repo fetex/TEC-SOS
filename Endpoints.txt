@@ -1,24 +1,52 @@
-Definición de los endpoints requeridos en la aplicación
 
----- Usuarios ----
+ENDPOINTS  API
 
-Crear 
-Modificar 
-Eliminar 
+ * USERS *
+
+GET   /user/id (int) 
+input: id of user
+output: json of user 
+
+GET ALL /users
+input: none
+out: colection of users JSON
+
+POST /user/create
+input: ID, name, email, address, phone, id_tec, id_cli ( JSON )
+out: code 201 (created)
+
+PUT /user/update/parameter
+input: parameter to be update
+output: code 200 (ok)
+
+DELETE /user/id
+input: user id to remove
+output: code 200(ok)
+
+thinh about the method of hiding
+
+    * PUBLICATIONS *
+
+GET   /post/id (int) 
+input: id of post
+output: json of post 
+
+GET ALL /post
+input: none
+out: colection of post JSON
+
+POST /post/create
+input: title, description, date, state, address ( JSON )
+out: code 201 (created)
+
+PUT /post/update/parameter
+input: parameter to be update
+output: code 200 (ok)
+
+DELETE /post/id
+input: post id to remove
+output: code 200(ok) 
 
 
----- Publicaciones (servicios) ----
-
-Crear
-Modificar
-Eliminar
-Ocultar
-Guardar
-
- ---- Multimedia ---
-
- Obtener imagen 
- cargar imagen 
- 
 
 
