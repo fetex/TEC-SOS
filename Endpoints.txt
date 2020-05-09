@@ -47,6 +47,10 @@ DELETE /post/id
 input: post id to remove
 output: code 200(ok) 
 
+<<<<<<< HEAD
+
+>>>>>>> master
+
 
 
 

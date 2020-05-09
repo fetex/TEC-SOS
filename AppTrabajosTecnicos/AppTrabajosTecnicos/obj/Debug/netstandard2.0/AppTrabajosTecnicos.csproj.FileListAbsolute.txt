@@ -1,0 +1,12 @@
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\bin\Debug\netstandard2.0\AppTrabajosTecnicos.deps.json
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\bin\Debug\netstandard2.0\AppTrabajosTecnicos.dll
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\bin\Debug\netstandard2.0\ref\AppTrabajosTecnicos.dll
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\bin\Debug\netstandard2.0\AppTrabajosTecnicos.pdb
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.csprojAssemblyReference.cache
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.AssemblyInfoInputs.cache
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.AssemblyInfo.cs
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.dll
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\ref\AppTrabajosTecnicos.dll
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.pdb
