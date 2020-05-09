@@ -16,3 +16,11 @@ Ocultar
 Guardar
 
 
+ ---- Multimedia ---
+
+ Obtener imagen 
+ cargar imagen 
+ 
+
+
+
