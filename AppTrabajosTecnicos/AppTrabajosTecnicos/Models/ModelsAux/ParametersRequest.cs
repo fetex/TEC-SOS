@@ -8,7 +8,7 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
     {
         #region Properties
         public List<string> Parametros { get; set; }
-        public List<string> QueryParametros { get; set; }
+        public Dictionary<string, string> QueryParametros { get; set; }
         #endregion Properties
 
         #region Initialize
