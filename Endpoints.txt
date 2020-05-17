@@ -41,12 +41,54 @@ out: code 201 (created)
 
 PUT /post/update/parameter
 input: parameter to be update
-output: code 200 (ok)
+output: code 202 (ok)
 
 DELETE /post/id
 input: post id to remove
 output: code 200(ok) 
 
+
+    *Category* 
+
+-- create category
+POST /category/create
+
+input: 
+{
+  "category": "plomero"
+}
+
+output: code 201 (created)
+
+-- Editar Category
+PUT /category/update/ID_category
+
+input:
+{
+  "idCategory": 1,
+  "category": "plomero"
+}
+output: code 202 (ok)
+
+-- Delete category
+DELETE /category/delete/idCategory
+output: 200
+
+-- list Category
+GET /category/list_all
+output: 200 
+{
+  "categories": [
+    {
+      "idCategory": 1,
+      "category": "plomero"
+    },
+    {
+      "idCategory": 2,
+      "category": "carpintero"
+    }
+  ]
+}
 
 
 
