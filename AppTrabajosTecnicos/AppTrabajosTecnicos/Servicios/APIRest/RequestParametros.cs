@@ -33,6 +33,7 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
                     var verboHttp = (Verbo == "GET") ? HttpMethod.Get : HttpMethod.Delete;
                     await this.ConstruirUrl(objecto);
                     HttpRequestMessage requestMessage = new HttpRequestMessage(verboHttp, Url);
+                    requestMessage = ServicioHeaders.AgregarCabeceras(requestMessage);
                     HttpResponseMessage HttpResponse = await client.SendAsync(requestMessage);
                     respuesta.Code = Convert.ToInt32(HttpResponse.StatusCode);
                     respuesta.IsSucess = HttpResponse.IsSuccessStatusCode;

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace AppTrabajosTecnicos.Servicios.APIRest
 {
+    /* POST AND PUT */
     public class RequestBody<T> : Request<T>
     {
 
@@ -34,6 +35,7 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
                 {
                     var verboHttp = (Verbo == "POST") ? HttpMethod.Post : HttpMethod.Put;
                     HttpRequestMessage requestMessage = new HttpRequestMessage(verboHttp, Url);
+                    requestMessage = ServicioHeaders.AgregarCabeceras(requestMessage);
                     requestMessage.Content = content;
                     HttpResponseMessage HttpResponse = await client.SendAsync(requestMessage);
                     respuesta.Code = Convert.ToInt32(HttpResponse.StatusCode);
@@ -46,7 +48,8 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
             {
                 respuesta.Response = "Error al momento de llamar al servidor";
             }
-            throw new NotImplementedException();
+
+            return respuesta;
         }
     }
 }

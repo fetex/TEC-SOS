@@ -3,6 +3,7 @@ using AppTrabajosTecnicos.Models.ModelsAux;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AppTrabajosTecnicos.Servicios.APIRest
 {
@@ -25,16 +26,16 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
         {
             var diccionario = ConfiguracionRest.VerbosConfiguracion;
             string nombreClase;
-            if (diccionario.TryGetValue(verbo, out nombreClase))
+            if (diccionario.TryGetValue(verbo.ToUpper(), out nombreClase))  //Verb Upper
             {
                 Type tipoClase = Type.GetType(nombreClase);
                 EstrategiaEnvio = (Request<T>)Activator.CreateInstance(tipoClase);
             }
         }
 
-        public APIResponse EjecutarEstrategia(T objecto)
+        public async Task<APIResponse> EjecutarEstrategia(T objecto)
         {
-            var response = EstrategiaEnvio.SendRequest(objecto);
+            var response = await EstrategiaEnvio.SendRequest(objecto);
             return response;
         }
         #endregion Metodos
