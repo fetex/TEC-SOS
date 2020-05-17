@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AppTrabajosTecnicos.Servicios.APIRest
 {
@@ -15,7 +16,7 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
         #endregion Properties
 
         #region Metodos 
-        public abstract APIResponse SendRequest(T objecto);
+        public abstract Task<APIResponse> SendRequest(T objecto);
         #endregion Metodos
     }
 }

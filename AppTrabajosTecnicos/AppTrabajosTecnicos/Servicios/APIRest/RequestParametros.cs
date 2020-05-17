@@ -17,9 +17,35 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
         }
 
         #region Metodos
-        public override APIResponse SendRequest(T objecto)
+        public override async Task<APIResponse> SendRequest(T objecto)
         {
-            throw new NotImplementedException();
+            APIResponse respuesta = new APIResponse()
+            {
+                Code = 400,
+                IsSucess = false,
+                Response = ""
+            };
+
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var verboHttp = (Verbo == "GET") ? HttpMethod.Get : HttpMethod.Delete;
+                    await this.ConstruirUrl(objecto);
+                    HttpRequestMessage requestMessage = new HttpRequestMessage(HttpMethod.Get, Url);
+                    HttpResponseMessage HttpResponse = await client.SendAsync(requestMessage);
+                    respuesta.Code = Convert.ToInt32(HttpResponse.StatusCode);
+                    respuesta.IsSucess = HttpResponse.IsSuccessStatusCode;
+                    respuesta.Response = await HttpResponse.Content.ReadAsStringAsync();
+                }
+
+            }
+            catch(Exception)
+            {
+                respuesta.Response = "Error al momento de llamar al servidor";
+            }
+
+            return respuesta;
         }
 
         private async Task ConstruirUrl(T parametros)
@@ -37,9 +63,6 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
                 var queryParameters = await new FormUrlEncodedContent(Parametros.QueryParametros).ReadAsStringAsync();
                 Url += queryParameters;
             }
-
-
-        
         }
 
         #endregion Metodos
