@@ -4,36 +4,35 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AppTrabajosTecnicos.Models
+namespace AppTrabajosTecnicos.Models 
 {
 	class UsuarioModel : NotificationObject
 	{
-		#region Atributos
+		#region Propiedades
 		[JsonIgnore]
-		public long ID { get; set; }
-		[JsonProperty("idUsuario")]
-		private long idUsuario { get; set; }
-		[JsonProperty("emailUsuario")]
-		public String Email { get; set; }
-		[JsonProperty("nombreUsuario")]
-		private String nombre;
+		public int ID { get; set; }
+		[JsonProperty("usuario_id")]
+		public int usuario_id { get; set; }
+		[JsonProperty("nombre")]
+		private string nombre;
+		[JsonProperty("email")]
+		public string Email { get; set; }
+		[JsonProperty("password")]
+		private string password;
+		[JsonIgnore]
+		public ClienteModel Cliente { get; set; }
+		[JsonIgnore]
+		public TecnicoModel Tecnico { get; set; }
+		[JsonIgnore]
 		private List<TelefonoModel> telefonos;
-		private List<DireccionModel> direcciones;
-		private PerfilModel perfil;
-		private List<TrabajoModel> trabajos;
-
-		#endregion Atributos
-
+		#endregion
 
 		#region Constructores
-		public UsuarioModel(PerfilModel perfil)
-		{
-			this.perfil = perfil;
-		}
-		#endregion Constructores
+		public UsuarioModel() { }
+		#endregion
 
-		#region Getter/Setter
-		public String Nombre
+		#region Getter & Setter
+		public string Nombre
 		{
 			get { return nombre; }
 			set
@@ -43,22 +42,12 @@ namespace AppTrabajosTecnicos.Models
 			}
 		}
 
-		public PerfilModel Perfil
+		public string Password
 		{
-			get { return perfil; }
+			get { return password; }
 			set
 			{
-				perfil = value;
-				OnPropertyChanged();
-			}
-		}
-
-		public List<DireccionModel> Direcciones
-		{
-			get { return direcciones; }
-			set
-			{
-				direcciones = value;
+				password = value;
 				OnPropertyChanged();
 			}
 		}
@@ -72,16 +61,7 @@ namespace AppTrabajosTecnicos.Models
 				OnPropertyChanged();
 			}
 		}
+		#endregion
 
-		public List<TrabajoModel> Trabajos
-		{
-			get { return trabajos; }
-			set
-			{
-				trabajos = value;
-				OnPropertyChanged();
-			}
-		}
-		#endregion Getter/Setter
 	}
 }

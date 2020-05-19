@@ -1,22 +1,32 @@
 ﻿using AppTrabajosTecnicos.Servicios.Propagacion;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	internal class TelefonoModel : NotificationObject
+	class TelefonoModel : NotificationObject
 	{
-		#region Atributos
-		public long ID { get; set; }
-		public UsuarioModel Usuario { get; set; }
+		#region Propiedades
+		[JsonIgnore]
+		public int ID { get; set; }
+		[JsonProperty("telefono_id")]
+		public int telefono_id { get; set; }
+		[JsonProperty("tipo")]
 		private string tipo;
+		[JsonProperty("numero")]
 		private string numero;
-		#endregion Atributos
+		public UsuarioModel Usuario { get; set; }
+		#endregion
 
 		#region Constructores
-		#endregion Constructores
-		
-		#region Getter/Setter
+		public TelefonoModel() { }
+		#endregion 
+
+		#region Getter & Setter
 		public string Tipo
-		{
+		{ 
 			get { return tipo; }
 			set
 			{
@@ -34,6 +44,6 @@ namespace AppTrabajosTecnicos.Models
 				OnPropertyChanged();
 			}
 		}
-		#endregion Getter/Setter
+		#endregion
 	}
 }
