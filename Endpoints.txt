@@ -25,12 +25,15 @@ output: code 200(ok)
 
 thinh about the method of hiding
 
-    * PUBLICATIONS *
+    * SERVICES *
 
-GET   /post/id (int) 
+-- Create Service 
+
+POST   /post/id (int) 
 input: id of post
 output: json of post 
 
+-- 
 GET ALL /post
 input: none
 out: colection of post JSON
@@ -60,7 +63,7 @@ input:
 
 output: code 201 (created)
 
--- Editar Category
+-- Update Category
 PUT /category/update/ID_category
 
 input:
@@ -91,4 +94,5 @@ output: 200
 }
 
 
+TABLA ADMINISTRATIVA -> CATEGORIA Y ESTADO
 
