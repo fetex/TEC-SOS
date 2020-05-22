@@ -1,24 +1,35 @@
 ﻿using AppTrabajosTecnicos.Servicios.Propagacion;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	internal class DireccionModel: NotificationObject
+	class DireccionModel : NotificationObject
 	{
-		#region Atributos
-		public long ID { get; set; }
-		public UsuarioModel Usuario { get; set; }
+		#region Propiedades
+		[JsonIgnore]
+		public int ID { get; set; }
+		[JsonProperty("direccion_id")]
+		public int direccion_id { get; set; }
+		[JsonProperty("direccion")]
 		private string direccion;
+		[JsonProperty("complemento")]
 		private string complemento;
-		private string comentario;
-		private bool favorito;
-		#endregion Atributos
+		[JsonProperty("indicacion")]
+		private string indicacion;
+		[JsonIgnore]
+		public ClienteModel Cliente { get; set; }
+		#endregion
 
 		#region Constructores
-		#endregion Constructores
+		public DireccionModel() { }
+		#endregion
 
-		#region Getter/Setter
+		#region Getter & Setter
 		public string Direccion
-		{ 
+		{
 			get { return direccion; }
 			set
 			{
@@ -27,8 +38,8 @@ namespace AppTrabajosTecnicos.Models
 			}
 		}
 
-		public string Complemento
-		{
+		public string Complemento 
+		{ 
 			get { return complemento; }
 			set
 			{
@@ -37,25 +48,15 @@ namespace AppTrabajosTecnicos.Models
 			}
 		}
 
-		public string Comentario
+		public string Indicacion
 		{
-			get { return comentario; }
+			get { return indicacion; }
 			set
 			{
-				comentario = value;
+				indicacion = value;
 				OnPropertyChanged();
 			}
 		}
-
-		public bool Favorito
-		{
-			get { return favorito; }
-			set
-			{
-				favorito = value;
-				OnPropertyChanged();
-			}
-		}
-		#endregion Getter/Setter
+		#endregion
 	}
 }

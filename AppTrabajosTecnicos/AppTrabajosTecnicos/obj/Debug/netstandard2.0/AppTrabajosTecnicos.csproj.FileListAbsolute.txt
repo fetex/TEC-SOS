@@ -10,3 +10,4 @@ D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\
 D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.dll
 D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\ref\AppTrabajosTecnicos.dll
 D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.pdb
+D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\XamlC.stamp
