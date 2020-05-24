@@ -1,36 +1,48 @@
 ﻿using AppTrabajosTecnicos.Servicios.Propagacion;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	internal class CategoriaModel : NotificationObject
+	class CategoriaModel : NotificationObject
 	{
-		#region Atributos
+		#region Propiedades
 		[JsonIgnore]
-		public long ID { get; set; }
-		[JsonProperty("idCategoria")]
-		private long idCategoria { get; set; }
-		[JsonProperty("nombreCategoria")]
+		public int ID { get; set; }
+		[JsonProperty("categoria_id")]
+		public int categoria_id { get; set; }
+		[JsonProperty("categoria")]
 		private string categoria;
 		[JsonIgnore]
-		private List<TrabajoModel> trabajo;
-		#endregion Atributos
+		private List<TecnicoModel> tecnicos;
+		#endregion
 
-		#region Constructores
-		#endregion Constructores
+		#region Constructor
+		public CategoriaModel() { }
+		#endregion
 
-		#region Getter/Setter
-		
-		public List<TrabajoModel> Trabajo
+		#region Getter & Setter
+		public String Categoria
 		{
-			get { return trabajo; }
+			get { return categoria; }
 			set
 			{
-				trabajo = value;
+				categoria = value;
 				OnPropertyChanged();
 			}
 		}
-		#endregion Getter/Setter
+
+		public List<TecnicoModel> Tecnicos
+		{
+			get { return tecnicos; }
+			set
+			{
+				tecnicos = value;
+				OnPropertyChanged();
+			}
+		}
+		#endregion
 	}
 }
