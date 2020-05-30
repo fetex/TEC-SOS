@@ -15,29 +15,32 @@ def crear_Category():
 def listar_Categoria():
     categorias = CategoriaModel.query.all()
     json = CategoriaSchema(many=True).dump(categorias)
-    return jsonify(json)
+    return jsonify(json),200
 
 
 @app.route('/categoria/<categoria_id>',methods=["GET"] )
-def obtener_categoria(categoria_id):
+def buscar_categoria(categoria_id):
     categoria = CategoriaModel.query.get(categoria_id)
     json = CategoriaSchema().dump(categoria)
     return jsonify(json)
 
 
-@app.route('/actualizarCategoria/<categoria_id>',methods=["PUT"])
-def actualizar_categoria(categoria_id):
-    categoria = CategoriaModel.query.get(categoria_id)
-    categoria.categoria = "Plomero"
+@app.route('/actualizarCategoria',methods=["PUT"])
+def actualizar_categoria():
+    req_data = request.get_json()
+    categoria_id = req_data['categoria_id']
+    nombre_categoria = req_data['categoria']
+    update = CategoriaModel.query.filter_by(categoria_id = categoria_id).first()
+    update.categoria =  nombre_categoria
     db.session.commit()
-    return "OK"
+    return "OK",202
 
 @app.route('/eliminarCategoria/<categoria_id>',methods=["DELETE"])
 def eliminar_categoriar(categoria_id):
     categoria = CategoriaModel.query.get(categoria_id)
     db.session.delete(categoria)
     db.session.commit()
-    return "OK"
+    return "OK", 200
 
 "Por nombre de categoria, traer a los tecnicos relacionados a esta"
 
