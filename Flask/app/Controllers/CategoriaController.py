@@ -22,7 +22,7 @@ def listar_Categoria():
 def buscar_categoria(categoria_id):
     categoria = CategoriaModel.query.get(categoria_id)
     json = CategoriaSchema().dump(categoria)
-    return jsonify(json)
+    return jsonify(json),200
 
 
 @app.route('/actualizarCategoria',methods=["PUT"])
