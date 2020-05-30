@@ -13,10 +13,13 @@ ma = Marshmallow(app)
 #Mapeo
 
 from app.Controllers import Example
-#from app.Controllers import CategoriaController
+from app.Controllers import CategoriaController
+
+#flask db migrate -m ""
+# flask db upgrade
+
 
 #Migraciones
-
 from app.Models import CategoriaModel
 from app.Models import DireccionModel
 from app.Models import EstadoServicioModel
