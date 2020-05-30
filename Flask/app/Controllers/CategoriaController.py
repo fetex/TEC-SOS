@@ -5,7 +5,7 @@ from flask import jsonify
 
 @app.route('/crearCategoria', methods=["POST"])
 def crear_Category():
-    categoria  = CategoriaModel(categoria = "Tecnico hidraulco")
+    categoria  = CategoriaModel(categoria = "Tecnico hidraulico")
     db.session.add(categoria)
     db.session.commit()
     return "OK"
