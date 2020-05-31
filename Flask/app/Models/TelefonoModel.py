@@ -1,6 +1,7 @@
 from app import db, ma
 from marshmallow import post_load
 
+
 class TelefonoModel(db.Model):
     __tablename__ = "Telefono"
     telefono_id = db.Column(db.Integer, primary_key = True)
@@ -10,7 +11,7 @@ class TelefonoModel(db.Model):
 
 class TelefonoSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        modelo = TelefonoModel
+        model = TelefonoModel
         include_fk = True
     
     @post_load

@@ -2,6 +2,9 @@ from app import db, ma
 from app.Models.ClienteModel import ClienteModel
 from app.Models.TelefonoModel import TelefonoModel
 from app.Models.TecnicoModel import TecnicoModel
+from marshmallow import post_load
+
+
 
 class UsuarioModel(db.Model):
     __tablename__ = "Usuario"
@@ -15,4 +18,9 @@ class UsuarioModel(db.Model):
 
 class UsuarioSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-        modelo = UsuarioModel
+        model = UsuarioModel
+
+    @post_load
+    def make_Usuario(self, data, **kwargs):
+        return UsuarioModel(**data)
+
