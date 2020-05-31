@@ -15,7 +15,7 @@ ma = Marshmallow(app)
 from app.Controllers import Example
 from app.Controllers import CategoriaController
 from app.Controllers import TelefonoController
-
+from app.Controllers import TecnicoController
 
 #flask db migrate -m ""
 # flask db upgrade
