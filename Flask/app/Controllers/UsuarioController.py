@@ -29,12 +29,15 @@ def buscar_usuario(usuario_id):
 def actualizar_usuario():
     req_data = request.get_json()
     usuario_id = req_data['usuario_id']
-    username = req_data['username']
+    password = req_data['password']
     email = req_data['email']
     update = UsuarioModel.query.filter_by(usuario_id = usuario_id).first()
-    update.username =  username
-    update.email = email
-    db.session.commit()
+    if (password != update.password):
+        update.password =  password
+        db.session.commit()
+    if (email != update.email):
+        update.email = email
+        db.session.commit()
     return "OK",202
 
 @app.route('/eliminarUsuario/<usuario_id>',methods=["DELETE"])

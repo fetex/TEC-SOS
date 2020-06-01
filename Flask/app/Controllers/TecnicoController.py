@@ -34,6 +34,16 @@ def actualizar_tecnico():
     db.session.commit()
     return "OK",202
 
+@app.route('/Calificar_Tecnico', methods=["PUT"])
+def Calificar_tecnico():
+    req_data = request.get_json()
+    tecnico_id = req_data['tecnico_id']
+    calificacion = req_data['calificacion']
+    update = TecnicoModel.query.filter_by(tecnico_id = tecnico_id).first()
+    update.calificacion = calificacion
+    db.session.commit()
+    return "OK", 202
+
 @app.route('/eliminarTecnico/<tecnico_id>',methods=["DELETE"])
 def eliminar_Tecnico(tecnico_id):
     Tecnico = TecnicoModel.query.get(tecnico_id)
