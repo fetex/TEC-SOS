@@ -18,7 +18,7 @@ def listar_usuario():
     return jsonify(json),200
 
 
-@app.route('/Usuario/<usuario_id>',methods=["GET"] )
+@app.route('/usuario/<usuario_id>',methods=["GET"] )
 def buscar_usuario(usuario_id):
     usuario = UsuarioModel.query.get(usuario_id)
     json = UsuarioSchema().dump(usuario)
@@ -29,16 +29,24 @@ def buscar_usuario(usuario_id):
 def actualizar_usuario():
     req_data = request.get_json()
     usuario_id = req_data['usuario_id']
-    password = req_data['password']
-    email = req_data['email']
+    username = req_data['username']
     update = UsuarioModel.query.filter_by(usuario_id = usuario_id).first()
-    if (password != update.password):
-        update.password =  password
-        db.session.commit()
-    if (email != update.email):
-        update.email = email
-        db.session.commit()
+    update.username = username
+    db.session.commit()
     return "OK",202
+
+@app.route('/cambiarContrasena', methods=["PUT"])
+def cambiarContrasena():
+    req_data = request.get_json()
+    usuario_id = req_data['usuario_id']
+    newPassword = req_data['password']
+    update = UsuarioModel.query.filter_by(usuario_id = usuario_id).first()
+    if(update.password != newPassword):
+        update.password = newPassword
+        db.session.commit()
+        return "Contrasena ha sido cambiada", 202
+    else:
+        return "Elija una contrasena distinta a la anterior", 200
 
 @app.route('/eliminarUsuario/<usuario_id>',methods=["DELETE"])
 def eliminar_usuarior(usuario_id):

@@ -11,7 +11,7 @@ def crear_EstadoServicio():
     return "OK", 201
 
 
-@app.route('/listarEstadoServicio', methods=["GET"])
+@app.route('/listarEstadoServicios', methods=["GET"])
 def listar_estadoServicio():
     estadoServicios = EstadoServicioModel.query.all()
     json = EstadoServicioSchema(many=True).dump(estadoServicios)
@@ -27,3 +27,10 @@ def actualizar_estadoServicio():
     update.estado =  estado
     db.session.commit()
     return "OK",202
+
+@app.route('/eliminarEstadoServicio/<direccion_id>',methods=["DELETE"])
+def eliminar_estadoServicio(direccion_id):
+    servicio = EstadoServicioModel.query.get(direccion_id)
+    db.session.delete(servicio)
+    db.session.commit()
+    return "OK", 200

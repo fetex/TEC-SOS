@@ -11,14 +11,14 @@ def crear_Direccion():
     return "OK", 201
 
 
-@app.route('/listarDireccion', methods=["GET"])
+@app.route('/listarDirecciones', methods=["GET"])
 def listar_direccion():
     direccions = DireccionModel.query.all()
     json = DireccionSchema(many=True).dump(direccions)
     return jsonify(json),200
 
 
-@app.route('/Direccion/<direccion_id>',methods=["GET"] )
+@app.route('/direccion/<direccion_id>',methods=["GET"] )
 def buscar_direccion(direccion_id):
     direccion = DireccionModel.query.get(direccion_id)
     json = DireccionSchema().dump(direccion)
