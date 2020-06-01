@@ -1088,24 +1088,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\dicso\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos.iOS\\AppTrabajosTecnicos.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.iOS\\AppTrabajosTecnicos.iOS.csproj",
       "projectName": "AppTrabajosTecnicos.iOS",
-      "projectPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos.iOS\\AppTrabajosTecnicos.iOS.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos.iOS\\obj\\",
+      "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.iOS\\AppTrabajosTecnicos.iOS.csproj",
+      "packagesPath": "C:\\Users\\dicso\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dicso\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1119,8 +1119,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
-              "projectPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj"
+            "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
+              "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj"
             }
           }
         }

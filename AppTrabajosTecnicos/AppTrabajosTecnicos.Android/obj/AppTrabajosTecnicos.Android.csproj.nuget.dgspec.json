@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {}
+    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {}
   },
   "projects": {
-    "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {
+    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
+        "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
         "projectName": "AppTrabajosTecnicos.Android",
-        "projectPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\obj\\",
+        "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
+        "packagesPath": "C:\\Users\\dicso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dicso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
-                "projectPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj"
+              "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
+                "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj"
               }
             }
           }
@@ -58,20 +58,20 @@
         }
       }
     },
-    "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
+    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+        "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
         "projectName": "AppTrabajosTecnicos",
-        "projectPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
+        "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+        "packagesPath": "C:\\Users\\dicso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dicso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
