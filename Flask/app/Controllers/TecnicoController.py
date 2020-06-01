@@ -1,6 +1,7 @@
 from app import app, db, ma
 from flask import request,jsonify
 from app.Models.TecnicoModel import TecnicoModel, TecnicoSchema
+from app.Models.ServicioModel import ServicioModel, ServicioSchema
 
 @app.route('/crearTecnico', methods=["POST"])
 def crear_Tecnico():
