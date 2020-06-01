@@ -1,6 +1,8 @@
 from app import app, db, ma
 from flask import request,jsonify
 from app.Models.ClienteModel import ClienteModel, ClienteSchema
+from app.Models.DireccionModel import DireccionModel, DireccionSchema
+from app.Models.ServicioModel import ServicioModel, ServicioSchema
 
 
 @app.route('/crearCliente', methods=["POST"])
@@ -24,16 +26,17 @@ def buscar_cliente(cliente_id):
     json = ClienteSchema().dump(cliente)
     return jsonify(json),200
 
-
-@app.route('/actualizarCliente',methods=["PUT"])
-def actualizar_cliente():
-    req_data = request.get_json()
-    cliente_id = req_data['cliente_id']
-    nombre_cliente = req_data['cliente']
-    update = ClienteModel.query.filter_by(cliente_id = cliente_id).first()
-    update.cliente =  nombre_cliente
-    db.session.commit()
-    return "OK",202
+@app.route('/cliente/<cliente_id>/direcciones', methods=["GET"])
+def listarDireccionesCliente(cliente_id):
+    direcciones = DireccionModel.query.filter_by(cliente_id = cliente_id)
+    json = DireccionSchema(many = True).dump(direcciones)
+    return jsonify(json), 200
+#Pendiete probar
+@app.route('/cliente/<cliente_id>/servicios', methods=["GET"])
+def listarServiciosCliente(cliente_id):
+    servicios = ServicioModel.query.filter_by(cliente_id = cliente_id)
+    json = ServicioSchema(many = True).dump(servicios)
+    return jsonify(json), 200
 
 @app.route('/eliminarCliente/<cliente_id>',methods=["DELETE"])
 def eliminar_clienter(cliente_id):
@@ -41,9 +44,3 @@ def eliminar_clienter(cliente_id):
     db.session.delete(cliente)
     db.session.commit()
     return "OK", 200
-
-"Por nombre de cliente, traer a los tecnicos relacionados a esta"
-
-# @app.route('/cliente-tecnico/<cliente>')
-# def cliente_Tecnico(cliente):
-    

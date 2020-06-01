@@ -21,13 +21,7 @@ from app.Controllers import DireccionController
 from app.Controllers import ClienteController
 from app.Controllers import ServicioController
 
-
-
-#flask db migrate -m ""
-# flask db upgrade
-
-
-#Migraciones y Tablas
+#Migraciones
 
 from app.Models import CategoriaModel
 from app.Models import DireccionModel
