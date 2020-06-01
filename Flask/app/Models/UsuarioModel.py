@@ -9,7 +9,7 @@ from marshmallow import post_load
 class UsuarioModel(db.Model):
     __tablename__ = "Usuario"
     usuario_id = db.Column(db.Integer, primary_key = True)
-    nombre = db.Column(db.String(50), nullable = False)
+    username = db.Column(db.String(50), nullable = False, unique = True)
     email = db.Column(db.String(50), nullable = False, unique = True)
     password = db.Column(db.String(20), nullable = False)
     cliente = db.relationship('ClienteModel', backref ='Usuario', lazy ='dynamic')
