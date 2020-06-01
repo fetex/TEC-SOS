@@ -5,8 +5,7 @@ class DireccionModel(db.Model):
     __tablename__ = "Direccion"
     direccion_id = db.Column(db.Integer, primary_key = True)
     direccion = db.Column(db.String(50), nullable = False, unique=True)
-    complemento = db.Column(db.String(50))
-    indicacion = db.Column(db.String(255))
+    barrio = db.Column(db.String(255))
     cliente_id = db.Column(db.Integer, db.ForeignKey('Cliente.cliente_id'))
 
 class DireccionSchema(ma.SQLAlchemyAutoSchema):

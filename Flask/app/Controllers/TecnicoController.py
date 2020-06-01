@@ -10,27 +10,27 @@ def crear_Tecnico():
     return "OK", 201
 
 
-@app.route('/listarTecnicos', methods=["GET"])
-def listar_Tecnico():
-    Tecnicos = TecnicoModel.query.all()
-    json = TecnicoSchema(many=True).dump(Tecnicos)
-    return jsonify(json),200
+@app.route('/listar_tecnicos', methods=["GET"])
+def listar_tecnico():
+    data = TecnicoModel.query.all()
+    json = TecnicoSchema(many=True).dump(data)
+    return jsonify(json), 200
 
 
-@app.route('/Tecnico/<tecnico_id>',methods=["GET"] )
-def buscar_Tecnico(tecnico_id):
-    Tecnico = TecnicoModel.query.get(tecnico_id)
-    json = TecnicoSchema().dump(Tecnico)
+@app.route('/tecnico/<tecnico_id>',methods=["GET"] )
+def buscar_tecnico(tecnico_id):
+    data = TecnicoModel.query.get(tecnico_id)
+    json = TecnicoSchema().dump(data)
     return jsonify(json),200
 
 
 @app.route('/actualizarTecnico',methods=["PUT"])
-def actualizar_Tecnico():
+def actualizar_tecnico():
     req_data = request.get_json()
-    Tecnico_id = req_data['Tecnico_id']
-    nombre_Tecnico = req_data['Tecnico']
-    update = TecnicoModel.query.filter_by(tecnico_id = Tecnico_id).first()
-    update.Tecnico =  nombre_Tecnico
+    tecnico_id = req_data['tecnico_id']
+    numero_tecnico = req_data['numero']
+    update = TecnicoModel.query.filter_by(tecnico_id = tecnico_id).first()
+    update.numero =  numero_tecnico
     db.session.commit()
     return "OK",202
 

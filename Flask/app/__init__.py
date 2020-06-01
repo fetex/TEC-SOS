@@ -12,16 +12,23 @@ ma = Marshmallow(app)
 
 #Mapeo
 
-from app.Controllers import Example
 from app.Controllers import CategoriaController
 from app.Controllers import TelefonoController
 from app.Controllers import TecnicoController
+from app.Controllers import EstadoServicioController
+from app.Controllers import UsuarioController
+from app.Controllers import DireccionController
+from app.Controllers import ClienteController
+from app.Controllers import ServicioController
+
+
 
 #flask db migrate -m ""
 # flask db upgrade
 
 
-#Migraciones
+#Migraciones y Tablas
+
 from app.Models import CategoriaModel
 from app.Models import DireccionModel
 from app.Models import EstadoServicioModel
