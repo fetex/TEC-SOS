@@ -54,3 +54,10 @@ def eliminar_Tecnico(tecnico_id):
     db.session.delete(Tecnico)
     db.session.commit()
     return "OK", 200
+
+#Pendiente probar
+@app.route('/tecnico/<tecnico_id>/servicios', methods=["GET"])
+def listarServiciosTecnico(tecnico_id):
+    servicios = ServicioModel.query.filter_by(tecnico_id = tecnico_id)
+    json = ServicioSchema(many = True).dump(servicios)
+    return jsonify(json), 200

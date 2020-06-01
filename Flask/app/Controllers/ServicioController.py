@@ -1,3 +1,4 @@
+from datetime import datetime
 from app import app, db, ma
 from flask import request,jsonify
 from app.Models.ServicioModel import ServicioModel, ServicioSchema
@@ -5,7 +6,9 @@ from app.Models.ServicioModel import ServicioModel, ServicioSchema
 
 @app.route('/crearServicio', methods=["POST"])
 def crear_servicio():
-    req_data = ServicioSchema().load(request.get_json())
+    req_data = request.get_json()
+    req_data['fecha'] = str(datetime.now()) 
+    req_data = ServicioSchema().load(req_data)
     db.session.add(req_data)
     db.session.commit()
     return "OK", 201

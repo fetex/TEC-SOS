@@ -31,6 +31,7 @@ def listarDireccionesCliente(cliente_id):
     direcciones = DireccionModel.query.filter_by(cliente_id = cliente_id)
     json = DireccionSchema(many = True).dump(direcciones)
     return jsonify(json), 200
+
 #Pendiete probar
 @app.route('/cliente/<cliente_id>/servicios', methods=["GET"])
 def listarServiciosCliente(cliente_id):
