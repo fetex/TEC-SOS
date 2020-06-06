@@ -6,26 +6,22 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class DireccionModel : NotificationObject
+	class DireccionModel : BaseModel
 	{
 		#region Propiedades
-		[JsonIgnore]
-		public int ID { get; set; }
 		[JsonProperty("direccion_id")]
 		public int direccion_id { get; set; }
 		[JsonProperty("direccion")]
 		private string direccion;
-		[JsonProperty("complemento")]
-		private string complemento;
-		[JsonProperty("indicacion")]
-		private string indicacion;
+		[JsonProperty("barrio")]
+		private string barrio;
 		[JsonIgnore]
 		public ClienteModel Cliente { get; set; }
 		#endregion
 
 		#region Constructores
 		public DireccionModel() { }
-		#endregion
+		#endregion Constructores
 
 		#region Getter & Setter
 		public string Direccion
@@ -38,22 +34,12 @@ namespace AppTrabajosTecnicos.Models
 			}
 		}
 
-		public string Complemento 
+		public string Barrio 
 		{ 
-			get { return complemento; }
+			get { return barrio; }
 			set
 			{
-				complemento = value;
-				OnPropertyChanged();
-			}
-		}
-
-		public string Indicacion
-		{
-			get { return indicacion; }
-			set
-			{
-				indicacion = value;
+				barrio = value;
 				OnPropertyChanged();
 			}
 		}

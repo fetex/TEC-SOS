@@ -6,16 +6,15 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class TecnicoModel : NotificationObject
+	class TecnicoModel : BaseModel
 	{
 		#region Propiedades
-		[JsonIgnore]
-		public int ID { get; set; }
 		[JsonProperty("tecnico_id")]
 		public int tecnico_id { get; set; }
 		[JsonProperty("calificacion")]
 		private float calificacion;
 		[JsonIgnore]
+		private string descripcion;
 		public UsuarioModel Usuario { get; set; }
 		[JsonIgnore]
 		private CategoriaModel categoria;
@@ -37,6 +36,16 @@ namespace AppTrabajosTecnicos.Models
 			set
 			{
 				calificacion = value;
+				OnPropertyChanged();
+			}
+		}
+
+		public string Descripcion
+		{
+			get { return descripcion; }
+			set
+			{
+				descripcion = value;
 				OnPropertyChanged();
 			}
 		}

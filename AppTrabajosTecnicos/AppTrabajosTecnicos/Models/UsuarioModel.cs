@@ -6,15 +6,13 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models 
 {
-	class UsuarioModel : NotificationObject
+	class UsuarioModel : BaseModel 
 	{
 		#region Propiedades
-		[JsonIgnore]
-		public int ID { get; set; }
 		[JsonProperty("usuario_id")]
 		public int usuario_id { get; set; }
-		[JsonProperty("nombre")]
-		private string nombre;
+		[JsonProperty("username")]
+		private string username;
 		[JsonProperty("email")]
 		public string Email { get; set; }
 		[JsonProperty("password")]
@@ -32,12 +30,12 @@ namespace AppTrabajosTecnicos.Models
 		#endregion
 
 		#region Getter & Setter
-		public string Nombre
+		public string Username
 		{
-			get { return nombre; }
+			get { return username; }
 			set
 			{
-				nombre = value;
+				username = value;
 				OnPropertyChanged();
 			}
 		}

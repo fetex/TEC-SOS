@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AppTrabajosTecnicos"
+    "\\AppTrabajosTecnicos",
+    "\\AppTrabajosTecnicos\\AppTrabajosTecnicos",
+    "\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\Servicios\\ApiRest"
   ],
   "SelectedNode": "\\AppTrabajosTecnicos\\AppTrabajosTecnicos.sln",
   "PreviewInSolutionExplorer": false

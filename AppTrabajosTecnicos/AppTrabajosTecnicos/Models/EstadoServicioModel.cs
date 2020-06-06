@@ -6,22 +6,30 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class EstadoServicioModel : NotificationObject
+	class EstadoServicioModel : BaseModel
 	{
 		#region Propiedades
-		[JsonIgnore]
-		public int ID { get; set; }
 		[JsonProperty("estadoServicio_id")]
 		public string estadoServicio_id { get; set; }
 		[JsonProperty("estado")]
-		public string Estado { get; set; }
+		private string estado;
 		public ServicioModel Servicio { get; set; }
 		#endregion
 
 		#region Constructores
-		#endregion
+		public EstadoServicioModel() {}
+		#endregion Constructores
 
 		#region Getter & Setter
-		#endregion
+		public string Estado
+		{
+			get { return estado; }
+			set
+			{
+				estado = value;
+				OnPropertyChanged();
+			}
+		}
+		#endregion Getter & Setter
 	}
 }

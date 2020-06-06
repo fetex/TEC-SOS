@@ -6,11 +6,9 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class TelefonoModel : NotificationObject
+	class TelefonoModel : BaseModel
 	{
 		#region Propiedades
-		[JsonIgnore]
-		public int ID { get; set; }
 		[JsonProperty("telefono_id")]
 		public int telefono_id { get; set; }
 		[JsonProperty("tipo")]

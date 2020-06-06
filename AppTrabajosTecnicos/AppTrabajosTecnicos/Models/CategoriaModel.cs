@@ -1,4 +1,5 @@
-﻿using AppTrabajosTecnicos.Servicios.Propagacion;
+﻿
+using AppTrabajosTecnicos.Servicios.Propagacion;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -6,22 +7,20 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class CategoriaModel : NotificationObject
+	class CategoriaModel : BaseModel
 	{
-		#region Propiedades
-		[JsonIgnore]
-		public int ID { get; set; }
+		#region Properties
 		[JsonProperty("categoria_id")]
 		public int categoria_id { get; set; }
 		[JsonProperty("categoria")]
 		private string categoria;
 		[JsonIgnore]
 		private List<TecnicoModel> tecnicos;
-		#endregion
+		#endregion Properties
 
 		#region Constructor
 		public CategoriaModel() { }
-		#endregion
+		#endregion Constructor
 
 		#region Getter & Setter
 		public String Categoria
@@ -33,7 +32,6 @@ namespace AppTrabajosTecnicos.Models
 				OnPropertyChanged();
 			}
 		}
-
 		public List<TecnicoModel> Tecnicos
 		{
 			get { return tecnicos; }

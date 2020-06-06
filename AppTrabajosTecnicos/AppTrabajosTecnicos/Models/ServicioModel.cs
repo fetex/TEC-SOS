@@ -6,11 +6,9 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class ServicioModel : NotificationObject
+	class ServicioModel : BaseModel
 	{
 		#region Propiedades
-		[JsonIgnore]
-		public int ID { get; set; }
 		[JsonProperty("servicio_id")]
 		public int servicio_id { get; set; }
 		[JsonProperty("descripcion")]

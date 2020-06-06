@@ -1,16 +1,11 @@
-﻿using AppTrabajosTecnicos.Servicios.Propagacion;
-using Newtonsoft.Json;
-using System;
+﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class ClienteModel : NotificationObject
+	class ClienteModel : BaseModel
 	{
 		#region Propiedades
-		[JsonIgnore]
-		public int ID { get; set; }
 		[JsonProperty("cliente_id")]
 		public int cliente_id { get; set; }
 		[JsonIgnore]

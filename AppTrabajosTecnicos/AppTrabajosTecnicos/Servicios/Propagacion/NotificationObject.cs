@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Servicios.Propagacion
 {
-	class NotificationObject : INotifyPropertyChanged
+	public class NotificationObject : INotifyPropertyChanged
 	{
 		public NotificationObject()
 		{
