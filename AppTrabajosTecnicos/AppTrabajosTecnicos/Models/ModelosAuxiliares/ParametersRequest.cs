@@ -12,7 +12,11 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
         #endregion Properties
 
         #region Initialize
-        public ParametersRequest() {}
+        public ParametersRequest() 
+        {
+            Parametros = new List<string>();
+            QueryParametros = new Dictionary<string, string>();
+        }
         #endregion Initialize
     }
 }
