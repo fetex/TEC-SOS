@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class ClienteModel : BaseModel
+	public class ClienteModel : BaseModel
 	{
 		#region Propiedades
 		[JsonProperty("cliente_id")]

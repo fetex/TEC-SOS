@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class CategoriaModel : BaseModel
+	public class CategoriaModel : BaseModel
 	{
 		#region Properties
 		[JsonProperty("categoria_id")]
@@ -20,6 +20,15 @@ namespace AppTrabajosTecnicos.Models
 		#endregion Constructor
 
 		#region Getter & Setter
+		public int Categoria_id
+		{
+			get { return categoria_id; }
+			set
+			{
+				categoria_id = value;
+				OnPropertyChanged();
+			}
+		}
 		public String Categoria
 		{
 			get { return categoria; }

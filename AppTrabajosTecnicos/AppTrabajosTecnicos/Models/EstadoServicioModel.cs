@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class EstadoServicioModel : BaseModel
+	public class EstadoServicioModel : BaseModel
 	{
 		#region Propiedades
 		[JsonProperty("estadoServicio_id")]

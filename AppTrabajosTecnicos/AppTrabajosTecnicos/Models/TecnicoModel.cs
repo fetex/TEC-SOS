@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AppTrabajosTecnicos.Models
 {
-	class TecnicoModel : BaseModel
+	public class TecnicoModel : BaseModel
 	{
 		#region Propiedades
 		[JsonProperty("tecnico_id")]
