@@ -16,7 +16,6 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
         #region Initialize 
         public ServicioHeaders()
         {
-            Headers = new Dictionary<string, string>();
             Headers.Add("conten-type", "application/json");
         }
         #endregion Initialize
