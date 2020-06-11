@@ -13,12 +13,14 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout BackgroundColor="">
-        <!-- Place new controls here -->
-        <Label Text="Versión de prueba!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Button Text="Lista Categorias" Command="{Binding ListaCategoriasCommand}"></Button>
+            <Button Text="Select Categoria" Command="{Binding SelectCategoriaCommand}"></Button>
+            <Button Text="Crear Categoria" Command="{Binding CrearCategoriaCommand}"></Button>
+            <Button Text="Editar Categoria" Command="{Binding EditarCategoriaCommand}"></Button>
+            <Button Text="Eliminar Categoria" Command="{Binding EliminarCategoriaCommand}"></Button>
+        </StackLayout>
     </ContentPage.Content>
 
 </ContentPage>
