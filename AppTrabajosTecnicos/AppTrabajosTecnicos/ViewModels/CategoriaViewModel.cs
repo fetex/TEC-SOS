@@ -7,6 +7,7 @@ using AppTrabajosTecnicos.Validations.Base;
 using AppTrabajosTecnicos.Validations.Rules;
 using AppTrabajosTecnicos.Views;
 using Newtonsoft.Json;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,7 +22,8 @@ namespace AppTrabajosTecnicos.ViewModels
     public class CategoriaViewModel : ViewModelBase
     {
         #region Properties
-        #region Atrributes
+
+        #region Attributes
         public ValidatableObject<string> BusquedaCategoria { get; set; }  //Campo de Busqueda
         public ValidatableObject<string> NombreCategoria { get; set; }
 
@@ -38,16 +40,15 @@ namespace AppTrabajosTecnicos.ViewModels
         private bool isBuscarEnable;
 
         private ObservableCollection<CategoriaModel> categorias;
-        #endregion Atrributes
-       
+        #endregion Attributes
 
-        #region Request
+        #region Requests
         public ElegirRequest<BaseModel> GetCategorias { get; set; }
         public ElegirRequest<BaseModel> GetCategoria { get; set; }
         public ElegirRequest<CategoriaModel> CreateCategoria { get; set; }
         public ElegirRequest<CategoriaModel> EditarCategoria { get; set; }
         public ElegirRequest<BaseModel> EliminarCategoria { get; set; }
-        #endregion Request
+        #endregion Requests
 
         #region Commands
         public ICommand ListaCategoriasCommand { get; set; }
@@ -119,10 +120,11 @@ namespace AppTrabajosTecnicos.ViewModels
             }
         }
         #endregion Getters & Setters
+
         #region Initialize
         public CategoriaViewModel()
         {
-            //PopUp = new MessageViewPop();
+            PopUp = new MessageViewPop();
             Categoria = new CategoriaModel();
             IsGuardarEnable = false;
             IsEliminarEnable = false;
@@ -157,9 +159,7 @@ namespace AppTrabajosTecnicos.ViewModels
             EliminarCategoria = new ElegirRequest<BaseModel>();
             EliminarCategoria.ElegirEstrategia("DELETE", urlEliminarCategoria);
         }
-
         public void InitializeCommands()
-
         {
             ListaCategoriasCommand = new Command(async () => await ListaCategorias(), () => true);
             SelectCategoriaCommand = new Command(async () => await SelecccionarCategoria(), () => IsBuscarEnable);
@@ -183,22 +183,22 @@ namespace AppTrabajosTecnicos.ViewModels
         {
             //var navigationStack = App.Current.MainPage.Navigation.NavigationStack;
             //var x = 1;
-            //APIResponse response = await GetCategorias.EjecutarEstrategia(null);
-            //if(response.IsSuccess)
-            //{
-            //    List<CategoriaModel> listaCategorias = JsonConvert.DeserializeObject<List<CategoriaModel>>(response.Response);
-            //    Categorias = new ObservableCollection<CategoriaModel>(listaCategorias);
-            //}
-            //else
-            //{
-            //    ((MessageViewModel)PopUp.BindingContext).Message = "Error al cargar las categorías";
-            //    await PopupNavigation.Instance.PushAsync(PopUp);
-            //}
+            APIResponse response = await GetCategorias.EjecutarEstrategia(null);
+            if(response.IsSuccess)
+            {
+                List<CategoriaModel> listaCategorias = JsonConvert.DeserializeObject<List<CategoriaModel>>(response.Response);
+                Categorias = new ObservableCollection<CategoriaModel>(listaCategorias);
+            }
+            else
+            {
+                ((MessageViewModel)PopUp.BindingContext).Message = "Error al cargar las categorías";
+                await PopupNavigation.Instance.PushAsync(PopUp);
+            }
             //await NavigationService.RemovePreviousPage();
             //var navigationStack2 = App.Current.MainPage.Navigation.NavigationStack;
             //var y = 3;
-            LoginViewModel LoginViewModel = (LoginViewModel)NavigationService.PreviousViewModel;
-            LoginViewModel.ContarLogin += 1;
+            //LoginViewModel LoginViewModel = (LoginViewModel)NavigationService.PreviousViewModel;
+            //LoginViewModel.ContarLogin += 1;
             await NavigationService.PopPage();
         }
 
@@ -214,13 +214,18 @@ namespace AppTrabajosTecnicos.ViewModels
                 {
                     Categoria = JsonConvert.DeserializeObject<CategoriaModel>(response.Response);
                     NombreCategoria.Value = Categoria.Categoria;
-                    IsEliminarEnable = true;
-                    IsGuardarEnable = true;
-                    IsGuardarEditar = true;
+                    IsEliminarEnable = true;  //Habilita el boton de eliminar
+                    IsGuardarEnable = true;  //Habilita el boton de crear
+                    IsGuardarEditar = true; // Habilita la caja de texto
                     ((Command)CrearCategoriaCommand).ChangeCanExecute();
                     ((Command)EliminarCategoriaCommand).ChangeCanExecute();
                 }
-                
+                else
+                {
+
+                    ((MessageViewModel)PopUp.BindingContext).Message = "No se encuentra esa categoría";
+                    await PopupNavigation.Instance.PushAsync(PopUp);
+                }
             }
             catch (Exception e)
             {
@@ -256,7 +261,16 @@ namespace AppTrabajosTecnicos.ViewModels
                     Categoria = NombreCategoria.Value
                 };
                 APIResponse response = await CreateCategoria.EjecutarEstrategia(categoria);
-
+                if (response.IsSuccess)
+                {
+                    ((MessageViewModel)PopUp.BindingContext).Message = "Categoría creada exitosamente";
+                    await PopupNavigation.Instance.PushAsync(PopUp);
+                }
+                else
+                {
+                    ((MessageViewModel)PopUp.BindingContext).Message = "Error al crear la categoría";
+                    await PopupNavigation.Instance.PushAsync(PopUp);
+                }
             }
             catch (Exception e)
             {
@@ -276,8 +290,16 @@ namespace AppTrabajosTecnicos.ViewModels
                 ParametersRequest parametros = new ParametersRequest();
                 parametros.Parametros.Add(categoria.categoria_id.ToString());
                 APIResponse response = await EditarCategoria.EjecutarEstrategia(categoria, parametros);
-               
-               
+                if (response.IsSuccess)
+                {
+                    ((MessageViewModel)PopUp.BindingContext).Message = "Categoría actualizada exitosamente";
+                    await PopupNavigation.Instance.PushAsync(PopUp);
+                }
+                else
+                {
+                    ((MessageViewModel)PopUp.BindingContext).Message = "Error al actualizar la categoría";
+                    await PopupNavigation.Instance.PushAsync(PopUp);
+                }
             }
             catch (Exception e)
             {
@@ -292,7 +314,16 @@ namespace AppTrabajosTecnicos.ViewModels
                 ParametersRequest parametros = new ParametersRequest();
                 parametros.Parametros.Add(Categoria.categoria_id.ToString());
                 APIResponse response = await EliminarCategoria.EjecutarEstrategia(null, parametros);
-            
+                if (response.IsSuccess)
+                {
+                    ((MessageViewModel)PopUp.BindingContext).Message = "Categoría eliminada exitosamente";
+                    await PopupNavigation.Instance.PushAsync(PopUp);
+                }
+                else
+                {
+                    ((MessageViewModel)PopUp.BindingContext).Message = "Error al eliminar la categoría";
+                    await PopupNavigation.Instance.PushAsync(PopUp);
+                }
             }
             catch (Exception e)
             {

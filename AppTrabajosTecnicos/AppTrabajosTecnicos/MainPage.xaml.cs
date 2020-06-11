@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppTrabajosTecnicos.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,9 +14,11 @@ namespace AppTrabajosTecnicos
 	[DesignTimeVisible(false)]
 	public partial class MainPage : ContentPage
 	{
+		CategoriaViewModel context = new CategoriaViewModel();
 		public MainPage()
 		{
 			InitializeComponent();
+			BindingContext = context;
 		}
 	}
 }

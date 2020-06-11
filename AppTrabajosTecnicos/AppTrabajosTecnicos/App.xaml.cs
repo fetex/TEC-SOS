@@ -1,6 +1,5 @@
 ﻿using AppGestionTiendas.Servicios.Navigation;
 using AppTrabajosTecnicos.Views;
-using Plugin.FirebasePushNotification;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,22 +8,33 @@ namespace AppTrabajosTecnicos
 {
 	public partial class App : Application
 	{
-        internal static NavigationService NavigationService;
+        #region Properties
+        static NavigationService navigationService;
+        #endregion Properties
+
+        #region Getters & Setters
+        public static NavigationService NavigationService
+        {
+            get
+            {
+                if (navigationService == null)
+                {
+                    navigationService = new NavigationService();
+                }
+                return navigationService;
+            }
+        }
+        #endregion Getters & Setters
 
         public App()
 		{
 			InitializeComponent();
-
-			MainPage = new NavigationPage(new CategoriaView());
+            MainPage = new NavigationPage(new CategoriaView());
 		}
 
 		protected override void OnStart()
 		{
-			CrossFirebasePushNotification.Current.Subscribe("general");
-			CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
-			{
-				System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
-			};
+		
 		}
 
 		protected override void OnSleep()

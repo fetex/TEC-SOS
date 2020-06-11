@@ -2,8 +2,7 @@
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
-using Plugin.GoogleClient;
-using Plugin.FirebasePushNotification;
+
 
 namespace AppTrabajosTecnicos.Droid
 {
@@ -15,13 +14,13 @@ namespace AppTrabajosTecnicos.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+
             base.OnCreate(savedInstanceState);
-            GoogleClientManager.Initialize(this);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
-            FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -33,7 +32,7 @@ namespace AppTrabajosTecnicos.Droid
         protected override void OnActivityResult(int requestCode, Result resultCode, Android.Content.Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            GoogleClientManager.OnAuthCompleted(requestCode, resultCode, data);
+            
         }
     }
 }

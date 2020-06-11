@@ -6,7 +6,7 @@
              xmlns:behaviors="clr-namespace:AppTrabajosTecnicos.Behaviors;assembly=AppTrabajosTecnicos"
              xmlns:converters="clr-namespace:AppTrabajosTecnicos.Converters;assembly=AppTrabajosTecnicos"
              mc:Ignorable="d"
-             x:Class="AppTrabajosTecnicos.Views.CategoriaView">
+             x:Class="AppTrabajosTecnicos.Views.CategoriaView"
              NavigationPage.HasNavigationBar="false">
 
     <ContentPage.Resources>
@@ -103,7 +103,7 @@
                     <StackLayout HorizontalOptions="FillAndExpand">
                         <StackLayout Style="{StaticResource RowBusqueda}">
                             <Label Text="Id Categoria" Style="{StaticResource BusquedaLabel}"></Label>
-                            <Entry Text="{Binding Categoria.IdCategoria}" Style="{StaticResource ItemInfo}" Placeholder="Id Categoría" IsEnabled="False"></Entry>
+                            <Entry Text="{Binding Categoria.categoria_id}" Style="{StaticResource ItemInfo}" Placeholder="Id Categoría" IsEnabled="False"></Entry>
                         </StackLayout>
                         <StackLayout Style="{StaticResource RowBusqueda}">
                             <Label Text="Nombre Categoria" Style="{StaticResource BusquedaLabel}"></Label>
@@ -129,7 +129,7 @@
                             <ViewCell>
                                 <Frame>
                                     <StackLayout>
-                                        <Label Text="{Binding IdCategoria}" TextColor="Accent"></Label>
+                                        <Label Text="{Binding Categoria_id}" TextColor="Accent"></Label>
                                         <Label Text="{Binding Categoria}"></Label>
                                     </StackLayout>
                                 </Frame>

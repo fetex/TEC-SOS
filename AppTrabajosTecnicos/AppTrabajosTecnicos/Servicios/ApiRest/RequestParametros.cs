@@ -41,7 +41,7 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
                 }
 
             }
-            catch(Exception)
+            catch(Exception e)
             {
                 respuesta.Response = "Error al momento de llamar al servidor";
             }

@@ -28,6 +28,7 @@ namespace AppGestionTiendas.Servicios.Navigation
             await ((NavigationPage)navigationPage).PopAsync();
         }
 
+
         public async Task RemovePreviousPage()
         {
             var navigation = App.Current.MainPage.Navigation;
