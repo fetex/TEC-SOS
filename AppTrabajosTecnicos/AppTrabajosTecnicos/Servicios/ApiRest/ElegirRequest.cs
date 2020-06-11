@@ -25,7 +25,7 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
         {
             var diccionario = ConfiguracionRest.VerbosConfiguracion;
             string nombreClase;
-            if (diccionario.TryGetValue(verbo.ToUpper(), out nombreClase))  //Verb Upper
+            if (diccionario.TryGetValue(verbo.ToUpper(), out nombreClase))  //Verb Upper 
             {
                 Type tipoClase = Type.GetType(nombreClase);
                 Type[] typeArgs = { typeof(T) };
