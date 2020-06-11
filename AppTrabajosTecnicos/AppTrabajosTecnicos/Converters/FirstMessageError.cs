@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
-namespace AppTrabajosTecnicos.Convertes
+namespace AppTrabajosTecnicos.Converters
 {
     public class FirstMessageError : IValueConverter
     {
