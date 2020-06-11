@@ -6,7 +6,7 @@
              xmlns:behaviors="clr-namespace:AppTrabajosTecnicos.Behaviors;assembly=AppTrabajosTecnicos"
              xmlns:converters="clr-namespace:AppTrabajosTecnicos.Converters;assembly=AppTrabajosTecnicos"
              mc:Ignorable="d"
-             x:Class="AppGestionTiendas.Views.CategoriaView"
+             x:Class="AppTrabajosTecnicos.Views.CategoriaView">
              NavigationPage.HasNavigationBar="false">
 
     <ContentPage.Resources>

@@ -31,10 +31,10 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
                 using (var client = new HttpClient())
                 {
                     var verboHttp = (Verbo == "GET") ? HttpMethod.Get : HttpMethod.Delete;
-                    await this.ConstruirUrl(objecto);
-                    HttpRequestMessage requestMessage = new HttpRequestMessage(verboHttp, Url);
+                    client.Timeout = TimeSpan.FromSeconds(50);
+                    HttpRequestMessage requestMessage = new HttpRequestMessage(verboHttp, UrlParameters);
                     requestMessage = ServicioHeaders.AgregarCabeceras(requestMessage);
-                    HttpResponseMessage HttpResponse = await client.SendAsync(requestMessage);
+                    HttpResponseMessage HttpResponse = client.SendAsync(requestMessage).Result;
                     respuesta.Code = Convert.ToInt32(HttpResponse.StatusCode);
                     respuesta.IsSuccess = HttpResponse.IsSuccessStatusCode;
                     respuesta.Response = await HttpResponse.Content.ReadAsStringAsync();
@@ -48,24 +48,6 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
 
             return respuesta;
         }
-
-        private async Task ConstruirUrl(T parametros)
-        {
-            ParametersRequest Parametros = parametros as ParametersRequest;
-
-            if (Parametros.Parametros.Count > 0)
-            {
-                Url = (Url.Substring(Url.Length - 1) == "/") ? Url.Remove(Url.Length - 1) : Url;
-                Parametros.Parametros.ForEach(p => Url += "/" + p); 
-            }
-
-            if (Parametros.QueryParametros.Count > 0)
-            {
-                var queryParameters = await new FormUrlEncodedContent(Parametros.QueryParametros).ReadAsStringAsync();
-                Url += queryParameters;
-            }
-        }
-
         #endregion Metodos
     }
 }
