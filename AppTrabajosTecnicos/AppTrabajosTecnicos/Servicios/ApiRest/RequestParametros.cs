@@ -22,7 +22,7 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
             APIResponse respuesta = new APIResponse()
             {
                 Code = 400,
-                IsSucess = false,
+                IsSuccess = false,
                 Response = ""
             };
 
