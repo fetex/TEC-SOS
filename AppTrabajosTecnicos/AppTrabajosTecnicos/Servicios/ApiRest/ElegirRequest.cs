@@ -2,6 +2,7 @@
 using AppTrabajosTecnicos.Models.ModelsAux;
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace AppTrabajosTecnicos.Servicios.APIRest
@@ -25,19 +26,15 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
         {
             var diccionario = ConfiguracionRest.VerbosConfiguracion;
             string nombreClase;
-            if (diccionario.TryGetValue(verbo.ToUpper(), out nombreClase))  //Verb Upper 
+            if (diccionario.TryGetValue(verbo.ToUpper(), out nombreClase))  //Verb Upper
             {
                 Type tipoClase = Type.GetType(nombreClase);
-                Type[] typeArgs = { typeof(T) };
-                var genericClass = tipoClase.MakeGenericType(typeArgs);
-                EstrategiaEnvio = (Request<T>)Activator.CreateInstance(genericClass, url, verbo.ToUpper());
+                EstrategiaEnvio = (Request<T>)Activator.CreateInstance(tipoClase);
             }
         }
 
-        public async Task<APIResponse> EjecutarEstrategia(T objecto, ParametersRequest parametersRequest = null)
+        public async Task<APIResponse> EjecutarEstrategia(T objecto)
         {
-            parametersRequest = parametersRequest ?? new ParametersRequest();
-            await EstrategiaEnvio.ConstruirUrl(parametersRequest);
             var response = await EstrategiaEnvio.SendRequest(objecto);
             return response;
         }
