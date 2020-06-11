@@ -6,7 +6,7 @@ namespace AppGestionTiendas.Configuracion
 {
     public class Endpoints
     {
-        public static readonly string URL_SERVIDOR = "http://3.15.213.222:8000";
+        public static readonly string URL_SERVIDOR = "http://18.189.21.56";
         public static readonly string CONSULTAR_ALL_CATEGORIAS = "/all";
         public static readonly string CONSULTAR_CATEGORIA = "/get";
         public static readonly string CREAR_CATEGORIA = "/create";
