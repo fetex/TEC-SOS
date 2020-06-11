@@ -19,7 +19,5 @@ namespace AppTrabajosTecnicos.Views
             InitializeComponent();
             BindingContext = context;
         }
-
-        
     }
 }
