@@ -11,3 +11,17 @@ D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\
 D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\ref\AppTrabajosTecnicos.dll
 D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.pdb
 D:\Universidad\Movil y Web\Proyecto\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\bin\Debug\netstandard2.0\AppTrabajosTecnicos.deps.json
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\bin\Debug\netstandard2.0\AppTrabajosTecnicos.dll
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\bin\Debug\netstandard2.0\ref\AppTrabajosTecnicos.dll
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\bin\Debug\netstandard2.0\AppTrabajosTecnicos.pdb
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.csprojAssemblyReference.cache
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\Views\CategoriaView.xaml.g.cs
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.AssemblyInfoInputs.cache
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.AssemblyInfo.cs
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.dll
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\ref\AppTrabajosTecnicos.dll
+C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\AppTrabajosTecnicos\AppTrabajosTecnicos\obj\Debug\netstandard2.0\AppTrabajosTecnicos.pdb

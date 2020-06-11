@@ -1,5 +1,6 @@
 ﻿using AppGestionTiendas.Servicios.Navigation;
 using AppTrabajosTecnicos.Views;
+using Plugin.FirebasePushNotification;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -19,6 +20,11 @@ namespace AppTrabajosTecnicos
 
 		protected override void OnStart()
 		{
+			CrossFirebasePushNotification.Current.Subscribe("general");
+			CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
+			{
+				System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
+			};
 		}
 
 		protected override void OnSleep()
