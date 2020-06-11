@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:behaviors="clr-namespace:AppTrabajosTecnicos.Behaviors;assembly=AppTrabajosTecnicos"
+             xmlns:converters="clr-namespace:AppTrabajosTecnicos.Converters;assembly=AppTrabajosTecnicos"
              mc:Ignorable="d"
-             x:Class="AppGestionTiendas.Views.CategoryView"
+             x:Class="AppGestionTiendas.Views.CategoriaView"
              NavigationPage.HasNavigationBar="false">
 
-    <!--<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
 
             <converters:FirstMessageError x:Key="FirstMessageError" />
@@ -101,7 +103,7 @@
                     <StackLayout HorizontalOptions="FillAndExpand">
                         <StackLayout Style="{StaticResource RowBusqueda}">
                             <Label Text="Id Categoria" Style="{StaticResource BusquedaLabel}"></Label>
-                            <Entry Text="{Binding Categoria.categoria_id}" Style="{StaticResource ItemInfo}" Placeholder="Id Categoría" IsEnabled="False"></Entry>
+                            <Entry Text="{Binding Categoria.IdCategoria}" Style="{StaticResource ItemInfo}" Placeholder="Id Categoría" IsEnabled="False"></Entry>
                         </StackLayout>
                         <StackLayout Style="{StaticResource RowBusqueda}">
                             <Label Text="Nombre Categoria" Style="{StaticResource BusquedaLabel}"></Label>
@@ -127,7 +129,7 @@
                             <ViewCell>
                                 <Frame>
                                     <StackLayout>
-                                        <Label Text="{Binding categoria_id}" TextColor="Accent"></Label>
+                                        <Label Text="{Binding IdCategoria}" TextColor="Accent"></Label>
                                         <Label Text="{Binding Categoria}"></Label>
                                     </StackLayout>
                                 </Frame>
@@ -140,5 +142,5 @@
                 <Button Text="Mostrar Lista" Command="{Binding ListaCategoriasCommand}"></Button>
             </StackLayout>
         </StackLayout>
-    </ContentPage.Content>-->
+    </ContentPage.Content>
 </ContentPage>

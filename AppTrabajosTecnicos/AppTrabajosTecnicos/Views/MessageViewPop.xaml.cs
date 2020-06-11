@@ -11,10 +11,10 @@ using Xamarin.Forms.Xaml;
 namespace AppTrabajosTecnicos.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginView : ContentPage
+    public partial class MessageViewPop 
     {
-        LoginViewModel context = new LoginViewModel();
-        public LoginView()
+        MessageViewModel context = new MessageViewModel();
+        public MessageViewPop()
         {
             InitializeComponent();
             BindingContext = context;

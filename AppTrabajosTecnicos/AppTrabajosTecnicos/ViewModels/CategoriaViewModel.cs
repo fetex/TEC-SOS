@@ -1,11 +1,11 @@
 ﻿using AppGestionTiendas.Configuracion;
 using AppGestionTiendas.ViewModels;
-using AppGestionTiendas.Views;
 using AppTrabajosTecnicos.Models;
 using AppTrabajosTecnicos.Models.ModelsAux;
 using AppTrabajosTecnicos.Servicios.APIRest;
 using AppTrabajosTecnicos.Validations.Base;
 using AppTrabajosTecnicos.Validations.Rules;
+using AppTrabajosTecnicos.Views;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace AppTrabajosTecnicos.ViewModels
 
         private CategoriaModel categoria;
 
-        //public MessageViewPop PopUp { get; set; }
+        public MessageViewPop PopUp { get; set; }
 
         private bool isGuardarEnable;
 
