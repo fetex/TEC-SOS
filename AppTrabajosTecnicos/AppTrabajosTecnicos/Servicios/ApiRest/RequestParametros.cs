@@ -22,7 +22,7 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
             APIResponse respuesta = new APIResponse()
             {
                 Code = 400,
-                IsSucess = false,
+                IsSuccess = false,
                 Response = ""
             };
 
@@ -36,7 +36,7 @@ namespace AppTrabajosTecnicos.Models.ModelsAux
                     requestMessage = ServicioHeaders.AgregarCabeceras(requestMessage);
                     HttpResponseMessage HttpResponse = await client.SendAsync(requestMessage);
                     respuesta.Code = Convert.ToInt32(HttpResponse.StatusCode);
-                    respuesta.IsSucess = HttpResponse.IsSuccessStatusCode;
+                    respuesta.IsSuccess = HttpResponse.IsSuccessStatusCode;
                     respuesta.Response = await HttpResponse.Content.ReadAsStringAsync();
                 }
 

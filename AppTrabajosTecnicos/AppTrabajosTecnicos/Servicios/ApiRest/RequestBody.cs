@@ -22,7 +22,7 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
             APIResponse respuesta = new APIResponse()
             {
                 Code = 400,
-                IsSucess = false,
+                IsSuccess = false,
                 Response = ""
             };
 
@@ -39,7 +39,7 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
                     requestMessage.Content = content;
                     HttpResponseMessage HttpResponse = await client.SendAsync(requestMessage);
                     respuesta.Code = Convert.ToInt32(HttpResponse.StatusCode);
-                    respuesta.IsSucess = HttpResponse.IsSuccessStatusCode;
+                    respuesta.IsSuccess = HttpResponse.IsSuccessStatusCode;
                     respuesta.Response = await HttpResponse.Content.ReadAsStringAsync();
                 }
 
