@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\Universidad\Movil y Web\Proyecto\Flask\venv"
+VIRTUAL_ENV="C:\Users\dicso\OneDrive\Documentos\DICSON\movil\TEC-SOS\Flask\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -5,15 +5,21 @@ from flask_marshmallow import Marshmallow
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://admin:password@database-1.cbj0bzg5agt7.us-east-2.rds.amazonaws.com:3306/trabajos_tecnicos"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://admin:password@database-1.cbj0bzg5agt7.us-east-2.rds.amazonaws.com:3306/TECSOS"
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 ma = Marshmallow(app)
 
 #Mapeo
 
-from app.Controllers import Example
-#from app.Controllers import CategoriaController
+from app.Controllers import CategoriaController
+from app.Controllers import TelefonoController
+from app.Controllers import TecnicoController
+from app.Controllers import EstadoServicioController
+from app.Controllers import UsuarioController
+from app.Controllers import DireccionController
+from app.Controllers import ClienteController
+from app.Controllers import ServicioController
 
 #Migraciones
 
