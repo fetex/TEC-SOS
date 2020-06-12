@@ -64,12 +64,7 @@ def buscar_email():
     usuario = UsuarioModel.query.filter_by(email=email).first()
     if email.lower() == usuario.email.lower() :
         if password == usuario.password:
-            temp = True
+            json = UsuarioSchema.dump(usuario)
+            return "email y contrasena correctos", 200
     
-    return temp, 200
-
-"Por nombre de usuario, traer a los tecnicos relacionados a esta"
-
-# @app.route('/usuario-tecnico/<usuario>')
-# def usuario_Tecnico(usuario):
-    
+    return "No se pudo iniciar sesion", 200
