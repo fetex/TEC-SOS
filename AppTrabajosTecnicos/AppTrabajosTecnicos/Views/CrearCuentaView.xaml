@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:behaviors="clr-namespace:AppTrabajosTecnicos.Behaviors;assembly=AppTrabajosTecnicos"
+             xmlns:converters="clr-namespace:AppTrabajosTecnicos.Converters;assembly=AppTrabajosTecnicos"
+             mc:Ignorable="d"
+             x:Class="AppTrabajosTecnicos.Views.CrearCuentaView">
+    <ContentPage.Resources>
+        
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="email"/>
+                <Entry Placeholder="Ingrese un correo"
+                   Keyboard="Email"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="password"/>
+                <Entry Placeholder="Ingrese una contraseña"
+                   IsPassword="True"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Verifique la contraseña"/>
+                <Entry Placeholder="Las contraseñas deben coincidir"
+                    IsPassword="True"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="username" />
+                <Entry Placeholder="Ingrese un nombre para su cuenta"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Button Text="Continuar"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
