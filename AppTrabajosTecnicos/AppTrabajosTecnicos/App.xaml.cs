@@ -29,7 +29,7 @@ namespace AppTrabajosTecnicos
         public App()
 		{
 			InitializeComponent();
-            MainPage = new NavigationPage(new CategoriaView());
+            MainPage = new NavigationPage(new LoginView());
 		}
 
 		protected override void OnStart()

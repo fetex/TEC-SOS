@@ -24,17 +24,17 @@
         <StackLayout>
             <StackLayout>
                 <Label Text="email"/>
-                <Entry Placeholder="Ingrese su email"
+                <Entry Text="{Binding Usuario.Email}" Placeholder="Ingrese su email"
                        Keyboard="Email"/>
             </StackLayout>
             <StackLayout>
                 <Label Text="password"/>
-                <Entry Placeholder="Ingrese su contrasena"
+                <Entry Text="{Binding Usuario.Password}" Placeholder="Ingrese su contrasena"
                        IsPassword="True"/>
             </StackLayout>
             <StackLayout>
-                <Button Text="Crear cuenta"/>
-                <Button Text="Ingresar"/>
+                <Button Text="Crear cuenta" Command="{Binding CrearCuentaCommand}"/>
+                <Button Text="Ingresar" Command="{Binding IngresarCommand }"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
