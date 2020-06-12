@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {}
+    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {
+    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
+        "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
         "projectName": "AppTrabajosTecnicos.Android",
-        "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
+        "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
         "packagesPath": "C:\\Users\\dicso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\obj\\",
+        "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
-                "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj"
+              "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
+                "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
+    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+        "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
         "projectName": "AppTrabajosTecnicos",
-        "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+        "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
         "packagesPath": "C:\\Users\\dicso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\web\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
+        "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
