@@ -55,6 +55,20 @@ def eliminar_usuarior(usuario_id):
     db.session.commit()
     return "OK", 200
 
+@app.route('/verificarCuenta', methods=["GET"])
+def buscar_email():
+    req_data = request.get_json()
+    email = req_data['email']
+    password = req_data['password']
+    usuario = UsuarioModel.query.filter_by(email=email)
+    if email.lower() == usuario.email.lower() :
+        if password == usuario.password:
+            return "email y contrasena correctos", 200
+        else:
+            return "La contrasena es invalida", 200
+    else:
+        return "El email no se encuentra registrado", 200
+
 "Por nombre de usuario, traer a los tecnicos relacionados a esta"
 
 # @app.route('/usuario-tecnico/<usuario>')
