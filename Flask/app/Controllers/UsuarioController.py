@@ -55,12 +55,12 @@ def eliminar_usuarior(usuario_id):
     db.session.commit()
     return "OK", 200
 
-@app.route('/verificarCuenta', methods=["GET"])
-def verificar_cuenta():
+@app.route('/verificarCuenta', methods=["PUT"])
+def buscar_email():
     req_data = request.get_json()
     email = req_data['email']
     password = req_data['password']
-    usuario = UsuarioModel.query.filter_by(email=email)
+    usuario = UsuarioModel.query.filter_by(email=email).first()
     if email.lower() == usuario.email.lower() :
         if password == usuario.password:
             return "email y contrasena correctos", 200
