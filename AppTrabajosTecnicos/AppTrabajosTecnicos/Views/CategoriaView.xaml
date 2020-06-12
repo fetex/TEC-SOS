@@ -67,7 +67,7 @@
 
             <Style TargetType="BoxView" x:Key="BoxStyleOne">
                 <Setter Property="HeightRequest" Value="5"></Setter>
-                <Setter Property="BackgroundColor" Value="DarkBlue"></Setter>
+                <Setter Property="BackgroundColor" Value="Fuchsia"></Setter>
                 <Setter Property="CornerRadius" Value="25"></Setter>
             </Style>
         </ResourceDictionary>
@@ -139,7 +139,7 @@
                 </ListView>
             </StackLayout>
             <StackLayout VerticalOptions="EndAndExpand">
-                <Button Text="Mostrar Lista" Command="{Binding ListaCategoriasCommand}"></Button>
+                <Button Text="Listar" Command="{Binding ListaCategoriasCommand}"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
