@@ -614,11 +614,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+      "projectUniqueName": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
       "projectName": "AppTrabajosTecnicos",
-      "projectPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+      "projectPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "D:\\Universidad\\Movil y Web\\Proyecto\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
+      "outputPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
