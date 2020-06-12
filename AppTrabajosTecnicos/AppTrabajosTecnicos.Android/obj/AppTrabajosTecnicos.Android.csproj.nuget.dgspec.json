@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {}
+    "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {
+    "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
+        "projectUniqueName": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
         "projectName": "AppTrabajosTecnicos.Android",
-        "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
-        "packagesPath": "C:\\Users\\dicso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\obj\\",
+        "projectPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\AppTrabajosTecnicos.Android.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\dicso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
-                "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj"
+              "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
+                "projectPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj"
               }
             }
           }
@@ -42,9 +42,21 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Rg.Plugins.Popup": {
               "target": "Package",
               "version": "[2.0.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "XLabs.Forms": {
+              "target": "Package",
+              "version": "[2.3.0-pre05, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",
@@ -62,20 +74,20 @@
         }
       }
     },
-    "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
+    "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+        "projectUniqueName": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
         "projectName": "AppTrabajosTecnicos",
-        "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
-        "packagesPath": "C:\\Users\\dicso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
+        "projectPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\dicso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -114,6 +126,10 @@
               "target": "Package",
               "version": "[2.0.0.3, )"
             },
+            "XLabs.Forms": {
+              "target": "Package",
+              "version": "[2.3.0-pre05, )"
+            },
             "Xam.Plugin.Media": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -124,7 +140,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.847, )"
+              "version": "[4.7.0.848-pre3, )"
             }
           },
           "imports": [

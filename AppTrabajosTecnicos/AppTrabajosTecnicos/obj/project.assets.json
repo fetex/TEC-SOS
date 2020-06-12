@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "ExifLib.PCL/1.0.2-pre01": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/ExifLib.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/ExifLib.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -26,22 +35,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Plugin.FirebasePushNotification/3.3.10": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Plugin.FirebasePushNotification.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Plugin.FirebasePushNotification.dll": {}
-        }
-      },
-      "Plugin.GoogleClient/2.1.5": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Plugin.GoogleClient.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Plugin.GoogleClient.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Rg.Plugins.Popup/2.0.0.3": {
@@ -105,10 +105,80 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "XLabs.Core/2.3.0-pre05": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/XLabs.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/XLabs.Core.dll": {}
+        }
+      },
+      "XLabs.Forms/2.3.0-pre05": {
+        "type": "package",
+        "dependencies": {
+          "XLabs.Core": "2.3.0-pre05",
+          "XLabs.IoC": "2.3.0-pre05",
+          "XLabs.Platform": "2.3.0-pre05",
+          "XLabs.Serialization": "2.3.0-pre05",
+          "Xamarin.Forms": "2.3.2.127"
+        },
+        "compile": {
+          "lib/portable-net45+win8+wpa81+monoandroid+MonoTouch+xamarinios10/XLabs.Forms.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81+monoandroid+MonoTouch+xamarinios10/XLabs.Forms.dll": {}
+        }
+      },
+      "XLabs.IoC/2.3.0-pre05": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/XLabs.IOC.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/XLabs.IOC.dll": {}
+        }
+      },
+      "XLabs.Platform/2.3.0-pre05": {
+        "type": "package",
+        "dependencies": {
+          "ExifLib.PCL": "1.0.2-pre01",
+          "XLabs.Core": "2.3.0-pre05",
+          "XLabs.IoC": "2.3.0-pre05",
+          "XLabs.Serialization": "2.3.0-pre05"
+        },
+        "compile": {
+          "lib/netstandard1.0/XLabs.Platform.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/XLabs.Platform.dll": {}
+        }
+      },
+      "XLabs.Serialization/2.3.0-pre05": {
+        "type": "package",
+        "compile": {
+          "lib/NETStandard1.0/XLabs.Serialization.dll": {}
+        },
+        "runtime": {
+          "lib/NETStandard1.0/XLabs.Serialization.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "ExifLib.PCL/1.0.2-pre01": {
+      "sha512": "v31z/pzE+sPLSisnTtMhBuxXFF0y4B7tzYsoPwbRuvw1+lC9+5QKP+CHaZpWGoQkniCstwD1JyhhlrwffIqT8Q==",
+      "type": "package",
+      "path": "exiflib.pcl/1.0.2-pre01",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exiflib.pcl.1.0.2-pre01.nupkg.sha512",
+        "exiflib.pcl.nuspec",
+        "lib/netstandard1.0/ExifLib.dll"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -253,49 +323,35 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Plugin.FirebasePushNotification/3.3.10": {
-      "sha512": "m2RokQa7jCSi0SVcz42AZk4btTGJneg0l56FfwgFswQ38Xkqj4OqCRr68y9lmh6y/tjdWKKkwYZK84YsVtRa0g==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "plugin.firebasepushnotification/3.3.10",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE",
-        "icon.png",
-        "lib/monoandroid10.0/Plugin.FirebasePushNotification.dll",
-        "lib/monoandroid10.0/Plugin.FirebasePushNotification.pdb",
-        "lib/monoandroid10.0/Plugin.FirebasePushNotification.xml",
-        "lib/monoandroid90/Plugin.FirebasePushNotification.dll",
-        "lib/monoandroid90/Plugin.FirebasePushNotification.pdb",
-        "lib/monoandroid90/Plugin.FirebasePushNotification.xml",
-        "lib/netstandard2.0/Plugin.FirebasePushNotification.dll",
-        "lib/netstandard2.0/Plugin.FirebasePushNotification.pdb",
-        "lib/netstandard2.0/Plugin.FirebasePushNotification.xml",
-        "lib/xamarinios10/Plugin.FirebasePushNotification.dll",
-        "lib/xamarinios10/Plugin.FirebasePushNotification.pdb",
-        "lib/xamarinios10/Plugin.FirebasePushNotification.xml",
-        "plugin.firebasepushnotification.3.3.10.nupkg.sha512",
-        "plugin.firebasepushnotification.nuspec",
-        "readme.txt"
-      ]
-    },
-    "Plugin.GoogleClient/2.1.5": {
-      "sha512": "+UAdR2Y/i+YJv6PHSaNYf8Y33MiSnIJMvewjo+VN4+lPuMwBmjBTkf60I7J/4/DIgJnsRh0gXY/C3G7WSKQwZA==",
-      "type": "package",
-      "path": "plugin.googleclient/2.1.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/monoandroid10.0/Plugin.GoogleClient.dll",
-        "lib/monoandroid10.0/Plugin.GoogleClient.xml",
-        "lib/monoandroid90/Plugin.GoogleClient.dll",
-        "lib/monoandroid90/Plugin.GoogleClient.xml",
-        "lib/netstandard2.0/Plugin.GoogleClient.dll",
-        "lib/netstandard2.0/Plugin.GoogleClient.xml",
-        "lib/xamarinios10/Plugin.GoogleClient.dll",
-        "lib/xamarinios10/Plugin.GoogleClient.xml",
-        "plugin.googleclient.2.1.5.nupkg.sha512",
-        "plugin.googleclient.nuspec"
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Rg.Plugins.Popup/2.0.0.3": {
@@ -794,37 +850,121 @@
         "xamarin.forms.4.7.0.848-pre3.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "XLabs.Core/2.3.0-pre05": {
+      "sha512": "9JHeideqKTMnE3oqbER639B3dzefrLaEe5Fl0SPSXMmRiJSq898srUoC00JNGtRTKSNLI9ZfD42h5QjwFsDfKw==",
+      "type": "package",
+      "path": "xlabs.core/2.3.0-pre05",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.0/XLabs.Core.dll",
+        "lib/portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios10+xamarinmac/XLabs.Core.dll",
+        "xlabs.core.2.3.0-pre05.nupkg.sha512",
+        "xlabs.core.nuspec"
+      ]
+    },
+    "XLabs.Forms/2.3.0-pre05": {
+      "sha512": "+hl9ztcC+jtWxEDFmpnrzp3J78IBrxI2WgCAVFHs/ADnc3ABYn8StElXHmJNvW2jN9Dde0EZtqkqsnvnlgKawQ==",
+      "type": "package",
+      "path": "xlabs.forms/2.3.0-pre05",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid/XLabs.Forms.Droid.dll",
+        "lib/monoandroid/XLabs.Forms.dll",
+        "lib/portable-net45+win8+wpa81+monoandroid+MonoTouch+xamarinios10/XLabs.Forms.dll",
+        "lib/uap10.0/XLabs.Forms.UWP.dll",
+        "lib/uap10.0/XLabs.Forms.dll",
+        "lib/win8/XLabs.Forms.WinRT.dll",
+        "lib/win8/XLabs.Forms.dll",
+        "lib/wpa81/XLabs.Forms.WinRT.Phone.dll",
+        "lib/wpa81/XLabs.Forms.dll",
+        "lib/xamarinios10/XLabs.Forms.dll",
+        "lib/xamarinios10/XLabs.Forms.iOS.dll",
+        "xlabs.forms.2.3.0-pre05.nupkg.sha512",
+        "xlabs.forms.nuspec"
+      ]
+    },
+    "XLabs.IoC/2.3.0-pre05": {
+      "sha512": "6XqKBkxvU362b+FmnjgoxkcKxCk/MNF5q2ecLsHu/MxFIdrxl8EKYdYOPo+ktyff4W4PGCGwSUJEI7EhJEgMFg==",
+      "type": "package",
+      "path": "xlabs.ioc/2.3.0-pre05",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.0/XLabs.IOC.dll",
+        "lib/portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios10+xamarinmac/XLabs.IOC.dll",
+        "xlabs.ioc.2.3.0-pre05.nupkg.sha512",
+        "xlabs.ioc.nuspec"
+      ]
+    },
+    "XLabs.Platform/2.3.0-pre05": {
+      "sha512": "kdwCt/XfHqC3nJgyToiXHojQ2JMws/L4lCBD1ZCiIJAbSIOa6XrCx68TwIhGyeJkJhuYv8dcbJNmh+QzlHnBww==",
+      "type": "package",
+      "path": "xlabs.platform/2.3.0-pre05",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid/XLabs.Platform.Droid.dll",
+        "lib/monoandroid/XLabs.Platform.dll",
+        "lib/netstandard1.0/XLabs.Platform.dll",
+        "lib/portable-net45+win8+wpa81+wp8+monoandroid+monotouch+xamarinios10/XLabs.Platform.dll",
+        "lib/uap10.0/XLabs.Platform.UWP.dll",
+        "lib/uap10.0/XLabs.Platform.dll",
+        "lib/win8/XLabs.Platform.WinRT.dll",
+        "lib/win8/XLabs.Platform.dll",
+        "lib/wpa81/XLabs.Platform.WinRT.Phone.dll",
+        "lib/wpa81/XLabs.Platform.dll",
+        "lib/xamarinios10/XLabs.Platform.dll",
+        "lib/xamarinios10/XLabs.Platform.iOS.dll",
+        "xlabs.platform.2.3.0-pre05.nupkg.sha512",
+        "xlabs.platform.nuspec"
+      ]
+    },
+    "XLabs.Serialization/2.3.0-pre05": {
+      "sha512": "Z6n0TXQsHfYdrQoVXaID6o1Mc7YIl4ALLsyNxmrV38MxeOH+zxQN5LUE/vdrtcm57AspLoM1noB3t5r1yDnaEA==",
+      "type": "package",
+      "path": "xlabs.serialization/2.3.0-pre05",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/NETStandard1.0/XLabs.Serialization.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+monoandroid+monotouch+xamarinios10+xamarinmac/XLabs.Serialization.dll",
+        "xlabs.serialization.2.3.0-pre05.nupkg.sha512",
+        "xlabs.serialization.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
-      "Plugin.FirebasePushNotification >= 3.3.10",
-      "Plugin.GoogleClient >= 2.1.5",
+      "Newtonsoft.Json >= 12.0.3",
       "Rg.Plugins.Popup >= 2.0.0.3",
+      "XLabs.Forms >= 2.3.0-pre05",
       "Xam.Plugin.Media >= 5.0.1",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.7.0.848-pre3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dicso\\.nuget\\packages\\": {},
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+      "projectUniqueName": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
       "projectName": "AppTrabajosTecnicos",
-      "projectPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
-      "packagesPath": "C:\\Users\\dicso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dicso\\OneDrive\\Documentos\\DICSON\\movil\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
+      "projectPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\AppTrabajosTecnicos.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "D:\\Universidad\\Web\\Holo\\TEC-SOS\\AppTrabajosTecnicos\\AppTrabajosTecnicos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\dicso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -855,17 +995,17 @@
             "version": "[2.0.3, )",
             "autoReferenced": true
           },
-          "Plugin.FirebasePushNotification": {
+          "Newtonsoft.Json": {
             "target": "Package",
-            "version": "[3.3.10, )"
-          },
-          "Plugin.GoogleClient": {
-            "target": "Package",
-            "version": "[2.1.5, )"
+            "version": "[12.0.3, )"
           },
           "Rg.Plugins.Popup": {
             "target": "Package",
             "version": "[2.0.0.3, )"
+          },
+          "XLabs.Forms": {
+            "target": "Package",
+            "version": "[2.3.0-pre05, )"
           },
           "Xam.Plugin.Media": {
             "target": "Package",
@@ -893,5 +1033,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'XLabs.Forms 2.3.0-pre05' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "XLabs.Forms",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

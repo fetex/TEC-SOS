@@ -6,22 +6,15 @@
              xmlns:behaviors="clr-namespace:AppTrabajosTecnicos.Behaviors;assembly=AppTrabajosTecnicos"
              xmlns:converters="clr-namespace:AppTrabajosTecnicos.Converters;assembly=AppTrabajosTecnicos"
              mc:Ignorable="d"
-             x:Class="AppTrabajosTecnicos.Views.TipoUsuarioView">
+             x:Class="AppTrabajosTecnicos.Views.TipoUsuarioView"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
                 <Label Text="¿Que rol desea desempeñar?" />
                 <StackLayout>
-                    <RadioButton Text="Cliente" 
-                             TextColor="Blue"
-                             GroupName="rol"/>
-                    <Label Text="Los usuarios tipo cliente, pueden realizar solicitudes a los tecnicos registrados. Ademas poseen una direccion en donde el tecnico va a realizar el servicio"/>
-                </StackLayout>
-                <StackLayout>
-                    <RadioButton Text="Tecnico" 
-                             TextColor="Red"
-                             GroupName="rol"/>
-                    <Label Text="Los usuarios tipo tecnico, pueden recibir solicitudes a los clientes registrados. Ademas poseen una una categoria y una puntuacion"/>
+                    <controls:BindableRadioGroup x:Name="bindiableRadioGroupRol"/>
+                    <Label Text="{Binding rolText.Value}"/>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
