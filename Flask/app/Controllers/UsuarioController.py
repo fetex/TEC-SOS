@@ -56,7 +56,7 @@ def eliminar_usuarior(usuario_id):
     return "OK", 200
 
 @app.route('/verificarCuenta', methods=["GET"])
-def buscar_email():
+def verificar_cuenta():
     req_data = request.get_json()
     email = req_data['email']
     password = req_data['password']
