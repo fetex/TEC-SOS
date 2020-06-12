@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppTrabajosTecnicos.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace AppTrabajosTecnicos.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CrearCuentaView : ContentPage
 	{
+		CategoriaViewModel context = new CategoriaViewModel();
 		public CrearCuentaView()
 		{
 			InitializeComponent();
+			BindingContext = context;
 		}
 	}
 }

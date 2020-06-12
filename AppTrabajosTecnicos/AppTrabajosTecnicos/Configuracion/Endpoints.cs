@@ -14,5 +14,23 @@ namespace AppGestionTiendas.Configuracion
         public static readonly string ELIMINAR_CATEGORIA = "/eliminarCategoria";
         public static readonly string VERIFICAR_CUENTA = "/verificarCuenta";
         public static readonly string CREAR_USUARIO = "/crearUsuario";
+
+        public static readonly string CONSULTAR_SERVICIOS = "/crearUsuario";
+        public static readonly string CONSULTAR_SERVICIO = "/crearUsuario";
+
+
+        public static readonly string CREAR_CLIENTE = "/crearUsuario";
+        public static readonly string CREAR_TECNICO = "/crearUsuario";
+        public static readonly string CREAR_TELEFONO = "/crearUsuario";
+        public static readonly string CREAR_USUARIO = "/crearUsuario";
+
+
+
+
+
+
+
+
+
     }
 }

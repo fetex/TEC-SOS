@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AppTrabajosTecnicos.Views.UsuarioView"
-             Title="Usuario">
+             Title="Usuario"
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                      HorizontalOptions="CenterAndExpand"

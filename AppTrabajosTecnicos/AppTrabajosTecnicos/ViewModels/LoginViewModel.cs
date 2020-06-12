@@ -38,7 +38,7 @@ namespace AppTrabajosTecnicos.ViewModels
 
 		#region Commands
 		public ICommand IngresarCommand { get; set; }
-		public ICommand CrearCuentaCommand { get; set;}
+		public ICommand CrearCuentaCommand { get; set; }
 		#endregion Commands
 
 		#region Getters/ Setters
@@ -66,39 +66,37 @@ namespace AppTrabajosTecnicos.ViewModels
 
 		public void InitializeRequest()
 		{
-			
+
 			string urlIniciarSesion = Endpoints.URL_SERVIDOR + Endpoints.VERIFICAR_CUENTA;
-	
+
 			IniciarSesion = new ElegirRequest<UsuarioModel>();
-			IniciarSesion.ElegirEstrategia("PUT", urlIniciarSesion); ;
+			IniciarSesion.ElegirEstrategia("GET", urlIniciarSesion); ;
 		}
 
 		public void InitializeCommands()
 		{
-			IngresarCommand = new Command( async() => await Ingresar(), () => true);
+			IngresarCommand = new Command(async () => await Ingresar(), () => true);
 			CrearCuentaCommand = new Command(async () => await CrearCuenta(), () => true);
 
 		}
 		public void InitializeFields()
-        {
-            BusquedaEmail = new ValidatableObject<string>();
+		{
+			BusquedaEmail = new ValidatableObject<string>();
 			PasswordLogin = new ValidatableObject<string>();
 
 			BusquedaEmail.Validations.Add(new RequiredRule<string> { ValidationMessage = "Debe ingresar Correo ELectronico" });
 			PasswordLogin.Validations.Add(new RequiredRule<string> { ValidationMessage = "El nombre de usuario es obligatorio" });
-        }
+		}
 		#endregion Initializate
 
 		#region Metodos
-		
+
 		public async Task Ingresar()
 		{
 			try
 			{
 				UsuarioModel usuario = new UsuarioModel()
 				{
-					usuario_id = Usuario.usuario_id,
-					Username = Usuario.Username,
 					Email = Usuario.Email,
 					Password = Usuario.Password
 				};
@@ -124,9 +122,9 @@ namespace AppTrabajosTecnicos.ViewModels
 			}
 
 		}
-		
 
-		private async Task	CrearCuenta()
+
+		private async Task CrearCuenta()
 		{
 			await NavigationService.PushPage(new CrearCuentaView());
 		}

@@ -6,7 +6,8 @@
              xmlns:behaviors="clr-namespace:AppTrabajosTecnicos.Behaviors;assembly=AppTrabajosTecnicos"
              xmlns:converters="clr-namespace:AppTrabajosTecnicos.Converters;assembly=AppTrabajosTecnicos"
              mc:Ignorable="d"
-             x:Class="AppTrabajosTecnicos.Views.CrearCuentaView">
+             x:Class="AppTrabajosTecnicos.Views.CrearCuentaView"
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.Resources>
         
     </ContentPage.Resources>
@@ -14,13 +15,13 @@
         <StackLayout>
             <StackLayout>
                 <Label Text="email"/>
-                <Entry Placeholder="Ingrese un correo"
+                <Entry Text="{Binding Usuario.Email}" Placeholder="Ingrese un correo"
                    Keyboard="Email"/>
             </StackLayout>
 
             <StackLayout>
                 <Label Text="password"/>
-                <Entry Placeholder="Ingrese una contraseña"
+                <Entry Text="{Binding Usuario.Password}" Placeholder="Ingrese una contraseña"
                    IsPassword="True"/>
             </StackLayout>
 
@@ -32,11 +33,11 @@
 
             <StackLayout>
                 <Label Text="username" />
-                <Entry Placeholder="Ingrese un nombre para su cuenta"/>
+                <Entry Text="{Binding Usuario.Username}" Placeholder="Ingrese un nombre para su cuenta"/>
             </StackLayout>
 
             <StackLayout>
-                <Button Text="Continuar"/>
+                <Button Text="Continuar" Command="{Binding CrearCommand}"/>
             </StackLayout>
         </StackLayout>
 
