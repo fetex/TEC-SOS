@@ -27,9 +27,9 @@ namespace AppTrabajosTecnicos
         #endregion Getters & Setters
 
         public App()
-		{
-			InitializeComponent();
-            MainPage = new NavigationPage(new CategoriaView());
+        {
+            InitializeComponent();
+            MainPage = new NavigationPage(new TipoUsuarioView());
 		}
 
 		protected override void OnStart()

@@ -69,6 +69,9 @@
     <PackageReference Include="Xamarin.Forms">
       <Version>4.6.0.847</Version>
     </PackageReference>
+    <PackageReference Include="XLabs.Forms">
+      <Version>2.3.0-pre05</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

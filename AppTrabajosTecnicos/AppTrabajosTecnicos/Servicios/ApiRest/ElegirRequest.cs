@@ -11,33 +11,44 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
     {
         #region Properties
         public Request<T> EstrategiaEnvio { get; set; }
-        public ConfiguracionRest ConfiguracionRest { get; set; }      
+        public ConfiguracionRest ConfiguracionRest { get; set; }
         #endregion Properties
 
         #region Initialize
-        public ElegirRequest() 
+        public ElegirRequest()
         {
             ConfiguracionRest = new ConfiguracionRest();
         }
         #endregion Initialize
 
-        #region Metodos 
+        #region Métodos
         public void ElegirEstrategia(string verbo, string url)
         {
-            var diccionario = ConfiguracionRest.VerbosConfiguracion;
-            string nombreClase;
-            if (diccionario.TryGetValue(verbo.ToUpper(), out nombreClase))  //Verb Upper
+            try 
             {
-                Type tipoClase = Type.GetType(nombreClase);
-                EstrategiaEnvio = (Request<T>)Activator.CreateInstance(tipoClase);
+                var diccionario = ConfiguracionRest.VerbosConfiguracion;
+                string nombreClase;
+                if (diccionario.TryGetValue(verbo.ToUpper(), out nombreClase))
+                {
+                    Type tipoClase = Type.GetType(nombreClase);
+                    Type[] typeArgs = { typeof(T) };
+                    var genericClass = tipoClase.MakeGenericType(typeArgs);
+                    EstrategiaEnvio = (Request<T>)Activator.CreateInstance(genericClass, url, verbo.ToUpper());
+                }
+            }
+            catch (Exception e)
+            {
+
             }
         }
 
-        public async Task<APIResponse> EjecutarEstrategia(T objecto)
+        public async Task<APIResponse> EjecutarEstrategia(T objecto, ParametersRequest parametersRequest = null)
         {
+            parametersRequest = parametersRequest ?? new ParametersRequest();
+            await EstrategiaEnvio.ConstruirURL(parametersRequest);
             var response = await EstrategiaEnvio.SendRequest(objecto);
             return response;
         }
-        #endregion Metodos
+        #endregion Métodos
     }
 }

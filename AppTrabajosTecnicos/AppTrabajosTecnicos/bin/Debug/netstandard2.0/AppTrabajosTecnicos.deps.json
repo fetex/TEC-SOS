@@ -11,14 +11,22 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
-          "Plugin.FirebasePushNotification": "3.3.10",
-          "Plugin.GoogleClient": "2.1.5",
           "Rg.Plugins.Popup": "2.0.0.3",
+          "XLabs.Forms": "2.3.0-pre05",
+          "Xam.Plugin.Media": "5.0.1",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.7.0.848-pre3"
         },
         "runtime": {
           "AppTrabajosTecnicos.dll": {}
+        }
+      },
+      "ExifLib.PCL/1.0.2-pre01": {
+        "runtime": {
+          "lib/netstandard1.0/ExifLib.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -32,22 +40,6 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.3.23909"
-          }
-        }
-      },
-      "Plugin.FirebasePushNotification/3.3.10": {
-        "runtime": {
-          "lib/netstandard2.0/Plugin.FirebasePushNotification.dll": {
-            "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.0.0"
-          }
-        }
-      },
-      "Plugin.GoogleClient/2.1.5": {
-        "runtime": {
-          "lib/netstandard2.0/Plugin.GoogleClient.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
           }
         }
       },
@@ -67,6 +59,17 @@
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {
             "assemblyVersion": "4.1.4.0",
             "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xam.Plugin.Media/5.0.1": {
+        "dependencies": {
+          "Xamarin.Essentials": "1.5.3.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Media.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -96,6 +99,59 @@
             "fileVersion": "4.7.0.310"
           }
         }
+      },
+      "XLabs.Core/2.3.0-pre05": {
+        "runtime": {
+          "lib/netstandard1.0/XLabs.Core.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "XLabs.Forms/2.3.0-pre05": {
+        "dependencies": {
+          "XLabs.Core": "2.3.0-pre05",
+          "XLabs.IoC": "2.3.0-pre05",
+          "XLabs.Platform": "2.3.0-pre05",
+          "XLabs.Serialization": "2.3.0-pre05",
+          "Xamarin.Forms": "4.7.0.848-pre3"
+        },
+        "runtime": {
+          "lib/portable-net45+win8+wpa81+monoandroid+MonoTouch+xamarinios10/XLabs.Forms.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "XLabs.IoC/2.3.0-pre05": {
+        "runtime": {
+          "lib/netstandard1.0/XLabs.IOC.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "XLabs.Platform/2.3.0-pre05": {
+        "dependencies": {
+          "ExifLib.PCL": "1.0.2-pre01",
+          "XLabs.Core": "2.3.0-pre05",
+          "XLabs.IoC": "2.3.0-pre05",
+          "XLabs.Serialization": "2.3.0-pre05"
+        },
+        "runtime": {
+          "lib/netstandard1.0/XLabs.Platform.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "XLabs.Serialization/2.3.0-pre05": {
+        "runtime": {
+          "lib/NETStandard1.0/XLabs.Serialization.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
       }
     }
   },
@@ -104,6 +160,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ExifLib.PCL/1.0.2-pre01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-v31z/pzE+sPLSisnTtMhBuxXFF0y4B7tzYsoPwbRuvw1+lC9+5QKP+CHaZpWGoQkniCstwD1JyhhlrwffIqT8Q==",
+      "path": "exiflib.pcl/1.0.2-pre01",
+      "hashPath": "exiflib.pcl.1.0.2-pre01.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -126,20 +189,6 @@
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
-    "Plugin.FirebasePushNotification/3.3.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-m2RokQa7jCSi0SVcz42AZk4btTGJneg0l56FfwgFswQ38Xkqj4OqCRr68y9lmh6y/tjdWKKkwYZK84YsVtRa0g==",
-      "path": "plugin.firebasepushnotification/3.3.10",
-      "hashPath": "plugin.firebasepushnotification.3.3.10.nupkg.sha512"
-    },
-    "Plugin.GoogleClient/2.1.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+UAdR2Y/i+YJv6PHSaNYf8Y33MiSnIJMvewjo+VN4+lPuMwBmjBTkf60I7J/4/DIgJnsRh0gXY/C3G7WSKQwZA==",
-      "path": "plugin.googleclient/2.1.5",
-      "hashPath": "plugin.googleclient.2.1.5.nupkg.sha512"
-    },
     "Rg.Plugins.Popup/2.0.0.3": {
       "type": "package",
       "serviceable": true,
@@ -154,6 +203,13 @@
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
+    "Xam.Plugin.Media/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UUR31EEnhDVa4IXgVfQIAL3u9v6YAyppsb5UlO9MNJ4quGGkfcWX++JexjB1nMGqvCzsjAT2t32drKDIXoW4SQ==",
+      "path": "xam.plugin.media/5.0.1",
+      "hashPath": "xam.plugin.media.5.0.1.nupkg.sha512"
+    },
     "Xamarin.Essentials/1.5.3.2": {
       "type": "package",
       "serviceable": true,
@@ -167,6 +223,41 @@
       "sha512": "sha512-PiZcPF6i9HfpGGfn5U+UFd58b2KWJOHsHeX/eWM2A/1S4WCZXKOPCceUWdhL6P8g4GD+iBTh4I1MhQ2XW1oAmg==",
       "path": "xamarin.forms/4.7.0.848-pre3",
       "hashPath": "xamarin.forms.4.7.0.848-pre3.nupkg.sha512"
+    },
+    "XLabs.Core/2.3.0-pre05": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9JHeideqKTMnE3oqbER639B3dzefrLaEe5Fl0SPSXMmRiJSq898srUoC00JNGtRTKSNLI9ZfD42h5QjwFsDfKw==",
+      "path": "xlabs.core/2.3.0-pre05",
+      "hashPath": "xlabs.core.2.3.0-pre05.nupkg.sha512"
+    },
+    "XLabs.Forms/2.3.0-pre05": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+hl9ztcC+jtWxEDFmpnrzp3J78IBrxI2WgCAVFHs/ADnc3ABYn8StElXHmJNvW2jN9Dde0EZtqkqsnvnlgKawQ==",
+      "path": "xlabs.forms/2.3.0-pre05",
+      "hashPath": "xlabs.forms.2.3.0-pre05.nupkg.sha512"
+    },
+    "XLabs.IoC/2.3.0-pre05": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6XqKBkxvU362b+FmnjgoxkcKxCk/MNF5q2ecLsHu/MxFIdrxl8EKYdYOPo+ktyff4W4PGCGwSUJEI7EhJEgMFg==",
+      "path": "xlabs.ioc/2.3.0-pre05",
+      "hashPath": "xlabs.ioc.2.3.0-pre05.nupkg.sha512"
+    },
+    "XLabs.Platform/2.3.0-pre05": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kdwCt/XfHqC3nJgyToiXHojQ2JMws/L4lCBD1ZCiIJAbSIOa6XrCx68TwIhGyeJkJhuYv8dcbJNmh+QzlHnBww==",
+      "path": "xlabs.platform/2.3.0-pre05",
+      "hashPath": "xlabs.platform.2.3.0-pre05.nupkg.sha512"
+    },
+    "XLabs.Serialization/2.3.0-pre05": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z6n0TXQsHfYdrQoVXaID6o1Mc7YIl4ALLsyNxmrV38MxeOH+zxQN5LUE/vdrtcm57AspLoM1noB3t5r1yDnaEA==",
+      "path": "xlabs.serialization/2.3.0-pre05",
+      "hashPath": "xlabs.serialization.2.3.0-pre05.nupkg.sha512"
     }
   }
 }

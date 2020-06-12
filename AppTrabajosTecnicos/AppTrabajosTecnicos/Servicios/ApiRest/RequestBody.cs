@@ -35,9 +35,10 @@ namespace AppTrabajosTecnicos.Servicios.APIRest
                 {
                     var verboHttp = (Verbo == "POST") ? HttpMethod.Post : HttpMethod.Put;
                     HttpRequestMessage requestMessage = new HttpRequestMessage(verboHttp, Url);
-                    requestMessage = ServicioHeaders.AgregarCabeceras(requestMessage);
+                    //requestMessage = ServicioHeaders.AgregarCabeceras(requestMessage);
                     requestMessage.Content = content;
-                    HttpResponseMessage HttpResponse = await client.SendAsync(requestMessage);
+                    client.Timeout = TimeSpan.FromSeconds(50);
+                    HttpResponseMessage HttpResponse = client.SendAsync(requestMessage).Result;
                     respuesta.Code = Convert.ToInt32(HttpResponse.StatusCode);
                     respuesta.IsSuccess = HttpResponse.IsSuccessStatusCode;
                     respuesta.Response = await HttpResponse.Content.ReadAsStringAsync();
